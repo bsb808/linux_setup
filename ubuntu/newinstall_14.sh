@@ -47,6 +47,7 @@ sudo apt-get -y install libxine1-ffmpeg mencoder
 sudo apt-get -y install p7zip-rar p7zip-full unace unrar zip unzip sharutils rar git gimp
 #uudeview mpack arj cabextract file-roller
 
+sudo apt-get install --reinstall exfat-fuse exfat-utils
 
 #gsettings set org.gnome.nautilus.preferences enable-interactive-search true
 # Need to change window switching back to alt-tab
@@ -54,6 +55,7 @@ sudo apt-get -y install p7zip-rar p7zip-full unace unrar zip unzip sharutils rar
 
 # Tweaks
 cp ../generic/dot_emacs ~/.emacs
+
 
 # Get rid of overlay scroll bars
 gsettings set com.canonical.desktop.interface scrollbar-mode normal
@@ -64,5 +66,9 @@ gsettings set org.gnome.nautilus.preferences enable-interactive-search false
 # Move window buttons to the right side
 gsettings set org.gnome.desktop.wm.preferences button-layout 'menu:minimize,maximize,close'
 
+apt-get remove indicator-messages
+
+
+# add myself to the dialout group for permissions to serial ports
 sudo adduser bsb dialout
 
