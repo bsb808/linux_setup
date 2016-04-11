@@ -1,0 +1,29 @@
+sudo apt-get -y install \
+    gconf-editor \
+    gparted \
+    gksu \
+    synaptic \
+    emacs23 \
+    ssh \
+    subversion \
+    inkscape \
+    calibre \
+    cifs-utils \
+    compizconfig-settings-manager \
+    vlc \
+    nautilus-open-terminal \
+    jabref \
+    compiz \
+    compizconfig-settings-manager \
+    compiz-plugins-extra \
+    compiz-gnome \
+    ipython \
+    git \
+    gimp \
+    python-numpy \
+    python-scipy \
+    python-matplotlib \
+    gnome-session-fallback \
+    keepassx \
+    xournal \
+    python-numpy python-scipy python-matplotlib ipython 

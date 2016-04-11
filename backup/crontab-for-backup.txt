@@ -1,0 +1,14 @@
+# ODD MONTHS
+#Daily backup with delete of first day of odd month
+01 01 01 1-11/2 * /home/bsb/WorkingCopies/frl/util/backup/backup_npshome_internal.sh -t dailyodd -d
+
+#Daily incremental backup with no delete - odd months
+01 01 02-31 1-11/2 * /home/bsb/WorkingCopies/frl/util/backup/backup_npshome_internal.sh -t dailyodd
+
+# EVEN MONTHS
+#Daily backup with delete of first day of even
+01 01 01 2-12/2 * /home/bsb/WorkingCopies/frl/util/backup/backup_npshome_internal.sh -t dailyeven -d
+
+#Daily incremental backup with no delete - eve months
+01 01 02-31 2-12/2 * /home/bsb/WorkingCopies/frl/util/backup/backup_npshome_internal.sh -t dailyeven
+

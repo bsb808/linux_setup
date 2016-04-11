@@ -1,0 +1,82 @@
+;; Set up some custom colors 
+;; get a color list from Edit->TextProperties->DisplayColors
+(set-background-color "dark green") 
+(set-foreground-color "wheat") 
+(set-cursor-color "orchid") 
+
+;; Set up font-lock colors
+(cond ((fboundp 'global-font-lock-mode)
+            ;; Turn on font-lock in all modes that support it
+            (global-font-lock-mode t)
+            ;; Maximum colors
+            (setq font-lock-maximum-decoration t)))
+
+
+;; Set up matlab mode!
+;; I got this from athena and it is kick-ass.
+;;(autoload 'matlab-mode "c:/home/bbing/util/comp/emacs/matlab.el" "Enter Matlab mode." t)
+;;(setq auto-mode-alist (cons '("\\.m\\'" . matlab-mode) auto-mode-alist))
+;;(autoload 'matlab-shell "c:/home/bbing/util/comp/emacs/matlab.el" "Interactive Matlab mode." t)
+
+
+;;
+;; ispell
+;;
+
+;;(setq ispell-local-dictionary-alist
+;;  '((nil				; default (english.aff)
+;;     "[A-Za-z]" "[^A-Za-z]" "[']" nil ("-B") nil iso-8859-1)
+;;    ("UK-xlg"				; english large version
+;;     "[A-Za-z]" "[^A-Za-z]" "[']" nil ("-B" "-d" "UK-xlg") nil iso-8859-1)
+;;    ("US-xlg"				; american large version
+;;     "[A-Za-z]" "[^A-Za-z]" "[']" nil ("-B" "-d" "US-xlg") nil iso-8859-1)
+;;   )
+;;)
+;;
+
+
+;; First you need to download the python-mode.el file from the internet
+;; Put it somewhere convenient and then add it to the load path
+(add-to-list 'load-path "~/")
+
+;; Python Mode (04.06.2008)
+;;(autoload 'python-mode "python-mode" "Python Mode." t)
+;;(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+;;(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+
+;;
+;;(setq-default ispell-program-name "aspell")
+;;(setq-default ispell-program-name "c:\\Programs\\Aspell\\bin\\aspell.exe")
+;;
+;; adding word count
+(defun word-count nil "Count words in buffer" (interactive)
+  (shell-command-on-region (point-min) (point-max) "wc -w"))
+
+;; Word Count tool, per sshteingold@cctrading.com
+(defun sds-word-count (start end)
+  ;; replacement for count-lines-region
+  "Count lines/words/characters from START to END"
+  (interactive "r")
+  (save-excursion
+    (save-restriction
+      (narrow-to-region start end)
+      (goto-char (min start end))
+      (message "Region (%d to %d) has: lines: %d; words: %d; characters: %d."
+	       start end (count-lines start end)
+	       (string-to-number (how-many "\\<")) (- end start)))))
+(define-key esc-map "=" 'sds-word-count)
+
+;; Get rid of annoying splash screen
+(setq inhibit-splash-screen t)
+
+;; At least with GNUEmacs, the following is printed in the console when moving around in a buffer:
+;;** (emacs:8878): CRITICAL **: murrine_style_draw_box: assertion `height >= -1' failed
+;; This can be fixed by replacing:
+;; GtkRange::trough-under-steppers = 0
+;;With:
+;; GtkRange::trough-under-steppers = 1
+;; at line 73 of /usr/share/themes/Ambiance/gtk-2.0/gtkrc
+
+;; Addresses "Arithmetic Error" when tabbing for Python
+(add-hook 'python-mode-hook
+  (lambda () (setq python-indent-offset 4)))
