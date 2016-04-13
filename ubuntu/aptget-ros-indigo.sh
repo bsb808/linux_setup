@@ -14,5 +14,29 @@ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA
 
 sudo apt-get update
 
-sudo apt-get install ros-indigo-desktop-full
+sudo apt-get install -y ros-indigo-desktop-full
 
+sudo rosdep init
+rosdep update
+
+sudo apt-get install -y python-rosinstall
+
+# Other NPS specific packages
+sudo apt-get -y install \
+    ros-indigo-gazebo-ros-control \
+    ros-indigo-husky-base \
+    ros-indigo-husky-bringup \
+    ros-indigo-husky-control \
+    ros-indigo-husky-description \
+    ros-indigo-husky-desktop \
+    ros-indigo-husky-gazebo  \
+    ros-indigo-husky-msgs \
+    ros-indigo-husky-navigation \
+    ros-indigo-husky-simulator \
+    ros-indigo-husky-viz \
+    ros-indigo-phidgets-api \
+    ros-indigo-phidgets-drivers \
+    ros-indigo-phidgets-imu \
+    ros-indigo-phidgets-ir \
+    ros-indigo-teleop-twist-joy \
+    ros-indigo-teleop-twist-keyboard
