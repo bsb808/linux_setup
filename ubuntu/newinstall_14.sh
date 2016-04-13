@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# Installation script for Ubuntu 14.04
+# 
 # Things to install 'by-hand' using software center
 # thunderbird
-# chrome
-#    chromium-browser \
+# chrome or chromium-browser 
+
 # apt-get
 sudo apt-get -y install \
     gconf-editor \
