@@ -1,0 +1,19 @@
+export EDITOR=nano
+
+# function for setting executable in SVN
+svnexfun() {
+  chmod +x $1
+  svn propset svn:executable on $1;
+}
+alias svnex=svnexfun
+
+# function for doing the same with git
+function gitexfun(){
+  chmod +x $1
+  git update-index --chmod=+x $1
+}
+alias gitex='gitexfun'
+
+# For ROS
+source /opt/ros/indigo/setup.bash
+source ~/catkin_ws/devel/setup.bash
