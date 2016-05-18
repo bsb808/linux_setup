@@ -4,6 +4,8 @@
 # Follows http://wiki.ros.org/indigo/Installation/Ubuntu
 
 echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+source /opt/ros/indigo/setup.bash
+
 
 # Setup catkin environment following http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment
 mkdir -p ~/catkin_ws/src
