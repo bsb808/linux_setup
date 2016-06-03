@@ -39,4 +39,5 @@ sudo apt-get -y install \
     ros-indigo-phidgets-imu \
     ros-indigo-phidgets-ir \
     ros-indigo-teleop-twist-joy \
-    ros-indigo-teleop-twist-keyboard
+    ros-indigo-teleop-twist-keyboard \
+    ros-indigo-um7
