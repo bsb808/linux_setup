@@ -24,6 +24,7 @@ sudo apt-get install -y python-rosinstall
 # Other NPS specific packages
 sudo apt-get -y install \
     ros-indigo-gazebo-ros-control \
+    ros-indigo-gazebo-ros-pkgs \
     ros-indigo-husky-base \
     ros-indigo-husky-bringup \
     ros-indigo-husky-control \
