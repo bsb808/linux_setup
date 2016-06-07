@@ -1,0 +1,3 @@
+#rsync script exclude file
+.*
+Downloads

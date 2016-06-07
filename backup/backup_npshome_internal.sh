@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# ------------- Command Line Arguments --------------------
-# Stole this from http://www.linuxcommand.org/wss0130.php
-LOG_FILE=/home/bsb/WorkingCopies/frl/util/backup/backup.log
+BROOT=/home/bsb/WorkingCopies/linux_setup/backup
+LOG_FILE=${BROOT}/backup.log
 echo "START new backup script on $(date)" >> $LOG_FILE
 
 # Set Defaults
@@ -42,7 +41,7 @@ SOURCES[0]=/home/bsb
 # A file with all our excludes in it
 # Use full path so that it works with cron
 #INCLUDES=./backup_include;
-EXCLUDES=/home/bsb/WorkingCopies/frl/util/backup/backup_exclude;
+EXCLUDES=${BROOT}/backup_exclude;
 
 # ------------- the script itself --------------------------------------
 # rsync from the system into the latest snapshot (notice that
