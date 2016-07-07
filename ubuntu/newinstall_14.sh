@@ -8,6 +8,7 @@
 
 # apt-get
 sudo apt-get -y install \
+    ntp \
     gconf-editor \
     gparted \
     gksu \
@@ -21,6 +22,7 @@ sudo apt-get -y install \
     compizconfig-settings-manager \
     vlc \
     nautilus-open-terminal \
+    ntp \
     jabref \
     compiz \
     compizconfig-settings-manager \
@@ -72,5 +74,5 @@ apt-get remove indicator-messages
 
 
 # add myself to the dialout group for permissions to serial ports
-sudo adduser bsb dialout
+#sudo adduser bsb dialout
 
