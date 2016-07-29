@@ -75,4 +75,3 @@ apt-get remove indicator-messages
 
 # add myself to the dialout group for permissions to serial ports
 #sudo adduser bsb dialout
-
