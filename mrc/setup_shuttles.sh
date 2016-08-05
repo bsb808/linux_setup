@@ -15,7 +15,7 @@ do
     #ssh frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ubuntu && echo !!Control | sudo -S ./newinstall_14_shuttle.sh'
 
     ssh frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ && git pull'
-    ssh frl@${REMOTE} 'echo !!Control | sudo -S ~/WorkingCopeis/linux_setup/ubuntu/aptget-ros-indigo.sh'
+    ssh frl@${REMOTE} 'echo !!Control | sudo -S ~/WorkingCopies/linux_setup/ubuntu/aptget-ros-indigo.sh'
 
     
 done
