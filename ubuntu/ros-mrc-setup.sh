@@ -26,8 +26,8 @@ source ~/catkin_ws/devel/setup.bash
 rosdep install rosaria
 
 cd ~/catkin_ws/src
-#git clone https://github.com/bsb808/nre_p3at.git
-git clone git@github.com:bsb808/nre_p3at.git
+git clone https://github.com/bsb808/nre_p3at.git
+#git clone git@github.com:bsb808/nre_p3at.git
 
 cd ~/catkin_ws
 catkin_make
