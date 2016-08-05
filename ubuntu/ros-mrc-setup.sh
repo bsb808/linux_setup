@@ -22,7 +22,7 @@ git clone https://github.com/amor-ros-pkg/rosaria.git
 # Re-setup your ros environment so that the system knows about our new package
 source ~/catkin_ws/devel/setup.bash
 # Use rosdep to install the dependencies
-rosdep update
+#rosdep update
 rosdep install rosaria
 
 cd ~/catkin_ws/src

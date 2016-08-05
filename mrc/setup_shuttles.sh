@@ -13,9 +13,11 @@ do
     
     #ssh frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ && git pull'
     #ssh frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ubuntu && echo !!Control | sudo -S ./newinstall_14_shuttle.sh'
-
-    ssh frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ && git pull'
-    ssh frl@${REMOTE} 'echo !!Control | sudo -S ~/WorkingCopies/linux_setup/ubuntu/aptget-ros-indigo.sh'
+    
+    #ssh frl@${REMOTE} 'echo !!Control | sudo -S apt-get update'
+    #ssh frl@${REMOTE} 'echo !!Control | sudo -S apt-get -y upgrade'
+    #ssh frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ && git pull'
+    #ssh frl@${REMOTE} 'echo !!Control | sudo -S ~/WorkingCopies/linux_setup/ubuntu/aptget-ros-indigo.sh'
     
     #ssh -t frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ubuntu && echo !!Control | sudo -S ./serial-perms.sh'
     #ssh -t frl@${REMOTE} 'cat /etc/udev/rules.d/50-myusb.rules'
@@ -24,7 +26,8 @@ do
     #ssh -t frl@${REMOTE} 'echo !!Control | sudo -S rosdep fix-permissions'
     #ssh -t frl@${REMOTE} 'rosdep update'
 
-    ssh frl@${REMOTE} '~/WorkingCopies/linux_setup/ubuntu/ros-setup.sh'
-    ssh frl@${REMOTE} '~/WorkingCopies/linux_setup/ubuntu/ros-mrc-setup.sh'
+    #ssh -t frl@${REMOTE} '~/WorkingCopies/linux_setup/ubuntu/ros-setup.sh'
+    ssh -t frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ && git pull'
+    ssh -t frl@${REMOTE} '~/WorkingCopies/linux_setup/ubuntu/ros-mrc-setup.sh'
 
 done
