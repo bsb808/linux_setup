@@ -15,4 +15,4 @@ cd ~/catkin_ws
 # Compile source
 catkin_make
 # Re-setup your ros environment so that the system knows about our new package
-source ~/catkin_ws/devel/setup.bash3
+source ~/catkin_ws/devel/setup.bash
