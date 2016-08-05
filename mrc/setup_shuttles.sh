@@ -14,8 +14,14 @@ do
     #ssh frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ && git pull'
     #ssh frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ubuntu && echo !!Control | sudo -S ./newinstall_14_shuttle.sh'
 
-    ssh frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ && git pull'
-    ssh frl@${REMOTE} 'echo !!Control | sudo -S ~/WorkingCopies/linux_setup/ubuntu/aptget-ros-indigo.sh'
-
+    #ssh frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ && git pull'
+    #ssh frl@${REMOTE} 'echo !!Control | sudo -S ~/WorkingCopies/linux_setup/ubuntu/aptget-ros-indigo.sh'
+    
+    ssh -t frl@${REMOTE} 'cd ~/WorkingCopies/linux_setup/ubuntu && echo !!Control | sudo -S ./serial-perms.sh'
+    ssh -t frl@${REMOTE} 'cat /etc/udev/rules.d/50-myusb.rules'
+    
+    # Fix mistake
+    ssh -t frl@${REMOTE} 'cat !!Control | sudo -S rosdep fix-permissions'
+    ssh -t frl@${REMOTE} 'rosdep update'
     
 done

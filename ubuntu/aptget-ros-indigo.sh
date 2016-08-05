@@ -16,9 +16,6 @@ apt-get update
 
 apt-get install -y ros-indigo-desktop-full
 
-rosdep init
-rosdep update
-
 apt-get install -y python-rosinstall
 
 # Other NPS specific packages

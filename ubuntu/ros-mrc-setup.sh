@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Serial port
-sudo ./serial-perms.sh
+#sudo ./serial-perms.sh
 
 # AMR
 cd ~/catkin_ws/src
