@@ -17,3 +17,18 @@ alias gitex='gitexfun'
 # For ROS
 source /opt/ros/indigo/setup.bash
 source ~/catkin_ws/devel/setup.bash
+
+
+
+# Networking
+alias sshShuttle0="ssh frl@192.168.11.50"
+alias sshShuttle1="ssh frl@192.168.11.51"
+alias sshShuttle2="ssh frl@192.168.11.52"
+alias sshShuttle3="ssh frl@192.168.11.53"
+
+# Git
+fgitcommit() {
+  echo $#
+  #git commit -a -m $1
+  }
+alias gitcommit=fgitcommit
