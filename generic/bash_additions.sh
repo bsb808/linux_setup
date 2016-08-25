@@ -35,4 +35,4 @@ fgitcommit() {
       git push origin master
   fi
 }
-alias gitcommit=fgitcommit
+alias gitcommit='fgitcommit'
