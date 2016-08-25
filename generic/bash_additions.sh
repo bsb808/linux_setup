@@ -28,7 +28,11 @@ alias sshShuttle3="ssh frl@192.168.11.53"
 
 # Git
 fgitcommit() {
-  echo $#
-  #git commit -a -m $1
-  }
+  if [ "$#" -lt 1 ]; then
+      echo "Mush supply a commit message!"
+  else
+      git commit -a -m $1
+      git push origin master
+  fi
+}
 alias gitcommit=fgitcommit
