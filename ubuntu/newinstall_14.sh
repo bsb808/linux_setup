@@ -17,6 +17,7 @@ sudo apt-get -y install \
     ssh \
     subversion \
     inkscape \
+    pstoedit \
     calibre \
     cifs-utils \
     compizconfig-settings-manager \
