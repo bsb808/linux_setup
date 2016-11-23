@@ -1,3 +1,4 @@
 #!/bin/bash
-sshpass -p '!!Control' rsync -azv /media/InternalDrive/frl/ bsb@172.20.81.11::frl/
-sshpass -p '!!Control' rsync -azv /media/InternalDrive/bsb/ bsb@172.20.81.11::bsb/
+IP="172.20.88.151"
+sshpass -p '!!Control' rsync -azv /media/InternalDrive/frl/ bsb@${IP}::frl/
+sshpass -p '!!Control' rsync -azv /media/InternalDrive/bsb/ bsb@${IP}::bsb/
