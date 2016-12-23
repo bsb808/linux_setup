@@ -25,6 +25,7 @@ sudo apt-get -y install \
     compiz-gnome \
     gimp \
     keepassx \
+    pdftk \
     xournal \
 
 # Optional bits

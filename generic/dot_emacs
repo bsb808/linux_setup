@@ -80,3 +80,7 @@
 ;; Addresses "Arithmetic Error" when tabbing for Python
 (add-hook 'python-mode-hook
   (lambda () (setq python-indent-offset 4)))
+
+;; Tweak the C/C++ style for opening brackets
+(setq c-default-style "linux"
+          c-basic-offset 2)
