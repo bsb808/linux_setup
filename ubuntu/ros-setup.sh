@@ -3,15 +3,16 @@
 # Setting up user environment for ROS 
 # Follows http://wiki.ros.org/indigo/Installation/Ubuntu
 
-echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
-source /opt/ros/indigo/setup.bash
+DIST="indigo"
+echo "source /opt/ros/${DIST}/setup.bash" >> ~/.bashrc
+source /opt/ros/${DIST}/setup.bash
 
 # Setup catkin environment following http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
 
-rosdep init
+sudo rosdep init
 rosdep update
 
 cd ~/catkin_ws/
