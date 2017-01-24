@@ -20,6 +20,7 @@ apt-get install -y ros-indigo-desktop-full
 
 apt-get install -y python-rosinstall
 
+apt-get install -y ros-indigo-rosdoc-lite 
 # Other NPS specific packages
 apt-get -y install \
     ros-indigo-gazebo-ros-control \
