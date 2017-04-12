@@ -12,17 +12,21 @@ sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /
 
 #apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
 
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 
 apt-get update
 
-apt-get install -y ros-indigo-desktop-full
+# Do this to force no questions
+#export DEBIAN_FRONTEND=noninteractive
 
-apt-get install -y python-rosinstall
 
-apt-get install -y ros-indigo-rosdoc-lite 
+apt-get install -y --force-yes \
+	ros-indigo-desktop-full \
+	python-rosinstall \
+	ros-indigo-rosdoc-lite 
+
 # Other NPS specific packages
-apt-get -y install \
+apt-get -y install -y --force-yes \
     ros-indigo-gazebo-ros-control \
     ros-indigo-gazebo-ros-pkgs \
     ros-indigo-husky-base \

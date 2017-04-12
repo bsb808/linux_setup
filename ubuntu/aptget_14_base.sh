@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Installation script for Ubuntu 14.04
+apt-get -y dist-upgrade
 
 apt-get -y install \
     cifs-utils \
@@ -15,6 +16,7 @@ apt-get -y install \
     zip \
     unzip \
 
+
 # For mounting FAT drives
-apt-get install --reinstall exfat-fuse exfat-utils
+#apt-get install --reinstall exfat-fuse exfat-utils
 
