@@ -11,6 +11,9 @@ git clone https://github.com/bsb808/nre_joy.git
 git clone https://github.com/bsb808/nre_common.git
 git clone https://github.com/amor-ros-pkg/rosaria.git
 git clone https://github.com/allenh1/p2os.git
+git clone https://github.com/bsb808/microstrain_3dm_gx5_45.git
+git clone https://github.com/bsb808/geonav_transform.git
+git clone https://github.com/bsb808/thingmagic_rfid.git
 # Check rosaria dependencies
 source ~/catkin_ws/devel/setup.bash
 rosdep update
