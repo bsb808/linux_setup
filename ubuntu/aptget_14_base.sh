@@ -7,6 +7,7 @@ apt-get -y install \
     cifs-utils \
     git \
     gksu \
+    minicom \
     nautilus-open-terminal \
     ntp \
     python-numpy python-scipy python-matplotlib ipython 
