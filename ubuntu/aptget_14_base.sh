@@ -13,6 +13,7 @@ apt-get -y install \
     python-numpy python-scipy python-matplotlib ipython 
     ssh \
     subversion \
+    openssh-server \
     synaptic \
     zip \
     unzip \
