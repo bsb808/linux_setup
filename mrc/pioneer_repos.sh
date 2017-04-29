@@ -1,6 +1,7 @@
 #
 
 CATKIN="${HOME}/catkin_ws"
+CATKINBSB="/home/bsb/catkin_ws"
 
 ROSREPOS=(geonav_transform \
     nre_common \
@@ -10,4 +11,5 @@ ROSREPOS=(geonav_transform \
     thingmagic_rfid)
 
 WCD="${HOME}/WorkingCopies"
+WCDBSB="/home/bsb/WorkingCopies"
 OTHERREPOS=(linux_setup)

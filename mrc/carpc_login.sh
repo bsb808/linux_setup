@@ -31,8 +31,8 @@ do
     #ssh frl@${IP} -t "exec bash -i -c \" cd ${REPO} && git remote add laptop git+ssh://bsb@192.168.11.120/~/${REPO} && git pull laptop master\""
 
     # Call linux_setup command
-    #CMD="./add_laptop_remote.sh"
-    CMD="./executecmds.sh ./pulllaptopcmds.sh"
+    CMD="./add_laptop_remote.sh"
+    #CMD="./executecmds.sh ./pulllaptopcmds.sh"
     ssh frl@${IP} -t "exec bash -i -c \" cd ~/WorkingCopies/linux_setup && git pull laptop master && cd mrc && ${CMD}  \""
 
     
