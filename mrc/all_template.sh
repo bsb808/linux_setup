@@ -4,7 +4,8 @@ SCRIPT="source ~/.bashrc; rosnode list;"
 SCRIPT="rosnode list; pwd"
 
 #for N in $(seq 0 7)
-for N in $(seq 5 5)
+NN=(1)
+for N in "${NN[@]}"
 do
     IP="192.168.11.6${N}"
     echo "--------"
@@ -15,7 +16,9 @@ do
     REPO="catkin_ws/src/nre_p3at"
     #ssh frl@${IP} -t "exec bash -i -c \" cd ${REPO} && git stash && git pull laptop master\""
 
-    ssh frl@${IP} -t "exec bash -i -c \" cd /etc/ros/indigo/nre.d && sudo mkdir old && sudo mv microstrain_pioneer.launch old  && sudo mv reader_pioneer.launch old \""
-
+    #ssh frl@${IP} -t "exec bash -i -c \" cd /etc/ros/indigo/nre.d && sudo mkdir old && sudo mv microstrain_pioneer.launch old  && sudo mv reader_pioneer.launch old \""
+    
+    CMD="ping 8.8.8.8"
+    ssh frl@${IP} -t "exec bash -i -c \"${CMD}\""
     
 done

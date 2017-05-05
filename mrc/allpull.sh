@@ -3,6 +3,10 @@
 SCRIPT="source ~/.bashrc; rosnode list;"
 SCRIPT="rosnode list; pwd"
 
+#
+#NN=(3 \
+#    6)
+#for N in "${NN[@]}"
 for N in $(seq 0 7)
 do
     IP="192.168.11.6${N}"
