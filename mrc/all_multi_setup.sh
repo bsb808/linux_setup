@@ -11,6 +11,16 @@ do
     echo "--------"
     echo ${IP}
 
+    # Multicast setup
+    LINE="frl ALL=\(ALL\) NOPASSWD: ALL"
+    F="/etc/sudoers"
+    CMD="echo ${LINE} | sudo tee -a ${F}"
+    #ssh frl@${IP} -t "exec bash -i -c \"${CMD}\""
+    CMD="sudo more ${F}"
+    #ssh frl@${IP} -t "exec bash -i -c \"${CMD}\""
+    CMD="cat /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts"
+    ssh frl@${IP} -t "exec bash -i -c \"${CMD}\""
+
     # Go passwordless
     LINE="frl ALL=\(ALL\) NOPASSWD: ALL"
     F="/etc/sudoers"

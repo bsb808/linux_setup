@@ -45,4 +45,5 @@ apt-get -y install -y --force-yes \
     ros-indigo-phidgets-ir \
     ros-indigo-teleop-twist-joy \
     ros-indigo-teleop-twist-keyboard \
-    ros-indigo-um7
+    ros-indigo-um7 \
+    ros-indigo-multimaster-fkie
