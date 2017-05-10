@@ -3,9 +3,10 @@
 SCRIPT="source ~/.bashrc; rosnode list;"
 SCRIPT="rosnode list; pwd"
 
-#for N in $(seq 0 7)
-NN=(1)
-for N in "${NN[@]}"
+
+#NN=(1)
+#for N in "${NN[@]}"
+for N in $(seq 0 7)
 do
     IP="192.168.11.6${N}"
     echo "--------"
@@ -18,7 +19,7 @@ do
 
     #ssh frl@${IP} -t "exec bash -i -c \" cd /etc/ros/indigo/nre.d && sudo mkdir old && sudo mv microstrain_pioneer.launch old  && sudo mv reader_pioneer.launch old \""
     
-    CMD="ping 8.8.8.8"
+    CMD="cd /home/frl/WorkingCopies/linux_setup/mrc && ./add_hosts.sh"
     ssh frl@${IP} -t "exec bash -i -c \"${CMD}\""
     
 done
