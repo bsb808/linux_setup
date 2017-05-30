@@ -6,7 +6,7 @@ SCRIPT="rosnode list; pwd"
 
 #NN=(1)
 #for N in "${NN[@]}"
-for N in $(seq 3 3)
+for N in $(seq 0 7)
 do
     IP="192.168.11.6${N}"
     echo "--------"
@@ -20,9 +20,9 @@ do
     #ssh frl@${IP} -t "exec bash -i -c \" cd /etc/ros/indigo/nre.d && sudo mkdir old && sudo mv microstrain_pioneer.launch old  && sudo mv reader_pioneer.launch old \""
     CMD1="sudo apt-get update && sudo apt-get install ros-indigo-hokuyo-node "
     CMD2="cd ~/WorkingCopies/linux_setup/mrc && git pull laptop origin"
-    CMD3="sudo cp 98-hokoyu-serial.rules /etc/udev/rules.d"
+    CMD3="sudo cp /home/frl/WorkingCopies/linux_setup/mrc/98-hokuyo-serial.rules /etc/udev/rules.d"
     CMD="${CMD2} && ${CMD3}"
     #CMD="cd /home/frl/WorkingCopies/linux_setup/mrc && ./add_hosts.sh"
-    ssh frl@${IP} -t "exec bash -i -c \"${CMD2}\""
+    ssh frl@${IP} -t "exec bash -i -c \"${CMD}\""
     
 done
