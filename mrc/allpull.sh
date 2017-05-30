@@ -15,7 +15,8 @@ do
 
     # Pull all from laptop
     CMD="./executecmds.sh ./pulllaptopcmds.sh"
-    ssh frl@${IP} -t "exec bash -i -c \" cd ~/WorkingCopies/linux_setup && git pull laptop master && cd mrc && ${CMD} && cd ~/catkin_ws && catkin_make \""
+    #ssh frl@${IP} -t "exec bash -i -c \" cd ~/WorkingCopies/linux_setup && git pull laptop master && cd mrc && ${CMD} && cd ~/catkin_ws && catkin_make \""
+    ssh frl@${IP} -t "exec bash -i -c \" cd ~/WorkingCopies/linux_setup && git pull laptop master && cd mrc && ${CMD}  \""
 
     
 done

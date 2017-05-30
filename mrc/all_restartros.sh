@@ -14,8 +14,18 @@ do
     echo "--------"
     echo ${IP}
 
-    
-    ssh frl@${IP} -t "exec bash -i -c \" sudo service nre stop && sleep 20 && sudo service nre start && sleep 2 && rosnode list\""
+    CMD="sudo service nre stop"
+    ssh frl@${IP} -t "exec bash -i -c \" ${CMD}\""
+done
 
-    
+sleep 30
+
+for N in $(seq 0 7)
+do
+    IP="192.168.11.6${N}"
+    echo "--------"
+    echo ${IP}
+
+    CMD="sudo service nre start"
+    ssh frl@${IP} -t "exec bash -i -c \" ${CMD}\""
 done
