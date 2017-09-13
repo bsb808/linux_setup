@@ -81,6 +81,6 @@ do
 echo "    END: Complted at $(date)" >> $LOG_FILE
 done
 
-# update the mtime of hourly.0 to reflect the snapshot time
-$TOUCH $BACKUP_ROOT ;
+# update the mtime of hourly.0 to reflect the snapshot t
+touch $BACKUP_ROOT ;
 
