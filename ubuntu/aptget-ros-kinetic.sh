@@ -12,7 +12,7 @@ sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /
 
 #apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
 #apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-#sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 
 apt-get update
 
@@ -20,7 +20,7 @@ apt-get update
 #export DEBIAN_FRONTEND=noninteractive
 
 
-distro="indigo"
+distro="kinetic"
 apt-get install -y --force-yes \
 	ros-${distro}-desktop \
 	ros-${distro}-rosdoc-lite 
@@ -33,4 +33,7 @@ apt-get -y install -y --force-yes \
     ros-${distro}-teleop-twist-keyboard \
     ros-${distro}-joy-teleop \
     ros-${distro}-multimaster-fkie
+
+
+apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
 

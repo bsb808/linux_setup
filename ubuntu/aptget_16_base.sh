@@ -7,17 +7,20 @@ apt-get -y dist-upgrade
 
 apt-get -y install \
     cifs-utils \
-    emacs23 \
+    emacs \
     git \
     gksu \
+    gtkterm \
     minicom \
-    nautilus-open-terminal \
+    nautilus-actions \
+    gnome-terminal \
     ntp \
-    python-numpy python-scipy python-matplotlib ipython 
+    python-numpy python-scipy python-matplotlib ipython \
     ssh \
     subversion \
     openssh-server \
     synaptic \
+    vim \
     zip \
     unzip \
 
