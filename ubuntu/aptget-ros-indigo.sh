@@ -11,8 +11,8 @@
 sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
 #apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
-
-apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+#apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 
 apt-get update
 
@@ -20,32 +20,17 @@ apt-get update
 #export DEBIAN_FRONTEND=noninteractive
 
 
+distro="kinetic"
 apt-get install -y --force-yes \
-	ros-indigo-desktop-full \
-	python-rosinstall \
-	ros-indigo-rosdoc-lite 
+	ros-${distro}-desktop \
+	ros-${distro}-rosdoc-lite 
 
 # Other NPS specific packages
 apt-get -y install -y --force-yes \
-    ros-indigo-gazebo-ros-control \
-    ros-indigo-gazebo-ros-pkgs \
-    ros-indigo-husky-base \
-    ros-indigo-husky-bringup \
-    ros-indigo-husky-control \
-    ros-indigo-husky-description \
-    ros-indigo-husky-desktop \
-    ros-indigo-husky-gazebo  \
-    ros-indigo-husky-msgs \
-    ros-indigo-husky-navigation \
-    ros-indigo-husky-simulator \
-    ros-indigo-husky-viz \
-    ros-indigo-phidgets-api \
-    ros-indigo-phidgets-drivers \
-    ros-indigo-phidgets-imu \
-    ros-indigo-phidgets-ir \
-    ros-indigo-teleop-twist-joy \
-    ros-indigo-teleop-twist-keyboard \
-    ros-indigo-joy-teleop \
-    ros-indigo-um7 \
-    ros-indigo-multimaster-fkie
+    ros-${distro}-gazebo-ros-control \
+    ros-${distro}-gazebo-ros-pkgs \
+    ros-${distro}-teleop-twist-joy \
+    ros-${distro}-teleop-twist-keyboard \
+    ros-${distro}-joy-teleop \
+    ros-${distro}-multimaster-fkie
 
