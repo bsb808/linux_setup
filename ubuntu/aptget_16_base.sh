@@ -5,12 +5,20 @@ apt-get -y update
 apt-get -y upgrade
 apt-get -y dist-upgrade
 
+#    byacc \
+
 apt-get -y install \
+    aptitude \
+    autoconf \
+    flex \
+    bison \
+    libtool \
     cifs-utils \
     git \
     gksu \
     gtkterm \
     minicom \
+    picocom \
     gnome-terminal \
     ntp \
     python-numpy python-scipy python-matplotlib ipython \
@@ -18,6 +26,7 @@ apt-get -y install \
     subversion \
     openssh-server \
     vim \
+    vpnc \
     zip \
     unzip
 
