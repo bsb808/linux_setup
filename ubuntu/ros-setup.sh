@@ -12,6 +12,7 @@ mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
 
+#sudo rosdep init
 sudo rosdep init
 rosdep update
 
