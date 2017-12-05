@@ -18,7 +18,7 @@ catkin_init_workspace
 
 
 #sudo rosdep init
-sudo rosdep init
+rosdep init
 rosdep update
 
 cd ~/catkin_ws/
