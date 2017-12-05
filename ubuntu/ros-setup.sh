@@ -3,11 +3,8 @@
 # Setting up user environment for ROS 
 # Follows http://wiki.ros.org/indigo/Installation/Ubuntu
 
-sudo rosdep init
-rosdep update
-
 DIST="indigo"
-DIST="kinetic"
+#DIST="kinetic"
 echo "source /opt/ros/${DIST}/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
@@ -15,7 +12,6 @@ source ~/.bashrc
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
-
 
 #sudo rosdep init
 rosdep init
