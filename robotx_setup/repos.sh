@@ -10,6 +10,7 @@ ROSREPOS["kingfisher_utils"]="https://github.com/bsb808/kingfisher_utils.git"
 ROSREPOS["geonav_transform"]="https://github.com/bsb808/geonav_transform.git"
 ROSREPOS["buoyancy_gazebo_plugin"]="https://github.com/bsb808/buoyancy_gazebo_plugin.git"
 ROSREPOS["usv_gazebo_plugins"]="https://github.com/bsb808/usv_gazebo_plugins.git"
+ROSREPOS["robotx_tutorial"]="https://github.com/bsb808/robotx_tutorial.git"
 
 #    kingfisher_plugins 
 
