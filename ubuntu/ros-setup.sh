@@ -23,4 +23,4 @@ catkin_make
 #echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/catkin_ws/devel/setup.bash
 
-#echo "source ~/WCD/linux_setup/ros/set_indigo.bash" >> ~/.bashrc
+echo "source ~/WCD/linux_setup/ros/set_indigo.bash" >> ~/.bashrc

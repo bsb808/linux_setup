@@ -1,3 +1,4 @@
 #!/bin/bash
 
-CMDS=("sudo adduser robotx --gecos 'RobotX Forum, , , ' --disabled-password && echo 'robotx:sydney' | sudo chpasswd")
+CMDS=("sudo adduser robotx --gecos 'RobotX Forum, , , ' --disabled-password && echo 'robotx:sydney' | sudo chpasswd" \
+    "sudo adduser robotx sudo")
