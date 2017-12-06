@@ -14,8 +14,8 @@ cd ~/catkin_ws/src
 catkin_init_workspace
 
 #sudo rosdep init
-rosdep init
-rosdep update
+#rosdep init
+#rosdep update
 
 cd ~/catkin_ws/
 catkin_make
@@ -23,4 +23,4 @@ catkin_make
 #echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/catkin_ws/devel/setup.bash
 
-#echo "source ~/WCD/linux_setup/ros/set_indigo.bash" >> ~/.bashrc
+echo "source ~/WCD/linux_setup/ros/set_indigo.bash" >> ~/.bashrc

@@ -22,7 +22,7 @@ fi
 
 for IP in "${IPS[@]}"
 do 
-    echo "--------${IP}--------"
+
     
     for CMD in "${CMDS[@]}"
     do
