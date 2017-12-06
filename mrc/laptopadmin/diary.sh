@@ -13,7 +13,10 @@
 ./forall_execute.sh cmds_echo_hostname.sh frl
 
 # disable screen lock
-./forall_execute.sh cmds_disablescreenlock.sh frl
+#./forall_execute.sh cmds_disablescreenlock.sh frl
+
+# udate, upgrade, dist-upgrade
+./forall_execute.sh cmds_update.sh robotx
 
 # Add robotx account
 ./forall_execute.sh cmds_add_user.sh
@@ -29,6 +32,10 @@
 
 # Setup ros env
 ./forall_execute.sh cmds_ros_setup.sh robotx
+
+# Pull all repositories
+./forall_execute.sh cmds_pullrepos.sh robotx
+
 
 # Reboot
 ./forall_execute.sh cmds_reboot.sh frl
