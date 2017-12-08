@@ -34,3 +34,23 @@ IPS=("192.168.20.22" \
     "192.168.20.92" \
     "192.168.20.34" \
 )
+
+# Optionally - tell us the hostnames
+
+declare -A LAPS
+
+LAPS["192.168.20.22"]="awela"
+LAPS["192.168.20.28"]="kole"
+LAPS["192.168.20.31"]="kala"
+LAPS["192.168.20.32"]="kihiki"
+LAPS["192.168.20.36"]="taape"
+LAPS["192.168.20.42"]="ehu"
+LAPS["192.168.20.51"]="awa"
+LAPS["192.168.20.56"]="manini"
+LAPS["192.168.20.65"]="api"
+LAPS["192.168.20.68"]="moa"
+LAPS["192.168.20.78"]="paulu"
+LAPS["192.168.20.83"]="ama"
+LAPS["192.168.20.92"]="lauhau"
+LAPS["192.168.20.34"]="kupipi"
+

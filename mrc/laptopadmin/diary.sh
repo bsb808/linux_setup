@@ -15,6 +15,7 @@
 # disable screen lock
 #./forall_execute.sh cmds_disablescreenlock.sh frl
 
+
 # udate, upgrade, dist-upgrade
 ./forall_execute.sh cmds_update.sh robotx
 
@@ -35,6 +36,9 @@
 
 # Pull all repositories
 ./forall_execute.sh cmds_pullrepos.sh robotx
+
+# Catkin make
+./forall_execute.sh cmds_catkinmake.sh robotx
 
 
 # Reboot

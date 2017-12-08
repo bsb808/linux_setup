@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SSH=true
+
 CATKIN="${HOME}/catkin_ws"
 WCD="${HOME}/WCD"
 
@@ -11,7 +13,11 @@ WCD="${HOME}/WCD"
 . ./repos.sh
 
 for KEY in ${!OTHERREPOS[@]}; do
-    echo "${KEY}:${OTHERREPOS[${KEY}]}"
+    URL=${OTHERREPOS[${KEY}]}
+    if [ $SSH ]; then
+	URL="git@github.com:bsb808/${KEY}.git"
+    fi
+    echo "${KEY}:${URL}"
     if [ -d ${WCD}/${KEY} ]; then
 	echo "Already exists, so pull"
 	cd ${WCD}/${KEY}
@@ -23,7 +29,11 @@ for KEY in ${!OTHERREPOS[@]}; do
 done
 
 for KEY in ${!ROSREPOS[@]}; do
-    echo "${KEY}:${ROSREPOS[${KEY}]}"
+    URL=${ROSREPOS[${KEY}]}
+    if [ $SSH ]; then
+	URL="git@github.com:bsb808/${KEY}.git"
+    fi
+    echo "${KEY}:${URL}"
     if [ -d ${CATKIN}/src/${KEY} ]; then
 	echo "Already exists, so pull"
 	cd ${CATKIN}/src/${KEY}

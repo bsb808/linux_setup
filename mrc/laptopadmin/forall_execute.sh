@@ -20,9 +20,28 @@ if [ "$#" -gt 1 ]; then
     echo "Executing using <${USER}> account."
 fi
 
+REV=false
+if [ "$#" -gt 2 ]; then
+    REV=true
+fi
+
+
+if ! [ REV ]; then
+    OLD=("${IPS[@]}")
+    N=${#OLD[@]}
+    for (( idx=${#OLD[@]}-1 ; idx>=0 ; idx-- )) ; do
+	IPS[N-idx-1]=${OLD[idx]}
+	echo $N
+	echo $idx
+	
+    done
+fi
+	
 for IP in "${IPS[@]}"
 do 
-    echo "-----------${USER}@${IP}-------------"
+    ip="${IP}"
+    H=${LAPS[${ip}]}
+    echo "-----------${USER}@${IP} : HOST:${H}-------------"
     
     for CMD in "${CMDS[@]}"
     do
