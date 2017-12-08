@@ -40,11 +40,14 @@
 # Catkin make
 ./forall_execute.sh cmds_catkinmake.sh robotx
 
+# 
+./forall_execute.sh cmds_pulllinuxsetup.sh robotx
+
 # Set default homepage on firefox
 ./forall_execute.sh cmds_firefox.sh robotx
 
 
-# Reboot
+# Reboot1
 ./forall_execute.sh cmds_reboot.sh frl
 
 

@@ -4,4 +4,4 @@
 #cp user.js ${DIR}
 
 # Master
-sudo cp robotx.js /usr/lib/firefox/browser/defaults/preferences/
+sudo cp ~/WCD/linux_setup/robotx_setup/robotx.js /usr/lib/firefox/browser/defaults/preferences/
