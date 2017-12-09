@@ -37,6 +37,7 @@ apt-get -y install -y --force-yes \
     ros-${distro}-kingfisher-msgs \
     ros-${distro}-kingfisher-description \
     ros-${distro}-tf2-msgs \
-    ros-${distro}-tf2-geometry-msgs
+    ros-${distro}-tf2-geometry-msgs \
+    ros-${distro}-tf2-move-base
     
 
