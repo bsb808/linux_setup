@@ -8,7 +8,7 @@
 # Following installation instructions from here...
 # http://wiki.ros.org/indigo/Installation/Ubuntu
 
-sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+#sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
 #apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
 #apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
@@ -38,6 +38,6 @@ apt-get -y install -y --force-yes \
     ros-${distro}-kingfisher-description \
     ros-${distro}-tf2-msgs \
     ros-${distro}-tf2-geometry-msgs \
-    ros-${distro}-tf2-move-base
+    ros-${distro}-move-base
     
 
