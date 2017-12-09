@@ -41,7 +41,8 @@
 ./forall_execute.sh cmds_kfgzbranch.sh robotx
 
 # Re-run if you make changes
-./forall_execute.sh cmds_rosindigoaptget.sh
+./forall_execute.sh cmds_pulllinuxsetup.sh robotx
+./forall_execute.sh cmds_rosindigoaptget.sh robotx
 
 # Catkin make
 ./forall_execute.sh cmds_catkinmake.sh robotx

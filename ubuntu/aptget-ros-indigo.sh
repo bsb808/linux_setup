@@ -35,6 +35,8 @@ apt-get -y install -y --force-yes \
     ros-${distro}-multimaster-fkie \
     ros-${distro}-geographic-info \
     ros-${distro}-kingfisher-msgs \
-    ros-${distro}-kingfisher-description
+    ros-${distro}-kingfisher-description \
+    ros-${distro}-tf2-msgs \
+    ros-${distro}-tf2-geometry-msgs
     
 
