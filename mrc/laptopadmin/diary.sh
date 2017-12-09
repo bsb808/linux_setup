@@ -47,6 +47,10 @@
 # Catkin make
 ./forall_execute.sh cmds_catkinmake.sh robotx
 
+
+# Setup pypid
+./forall_execute.sh cmds_setuppypid.sh robotx
+
 # 
 ./forall_execute.sh cmds_pulllinuxsetup.sh robotx
 

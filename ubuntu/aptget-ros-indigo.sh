@@ -14,7 +14,7 @@
 #apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 #sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 
-apt-get update
+#apt-get update
 
 # Do this to force no questions
 #export DEBIAN_FRONTEND=noninteractive
@@ -38,6 +38,8 @@ apt-get -y install -y --force-yes \
     ros-${distro}-kingfisher-description \
     ros-${distro}-tf2-msgs \
     ros-${distro}-tf2-geometry-msgs \
-    ros-${distro}-move-base
+    ros-${distro}-move-base \
+    ros-${distro}-hector-gazebo \
+    ros-${distro}-hector-gazebo-plugins
     
 
