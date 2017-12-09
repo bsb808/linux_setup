@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SSH=true
+SSH=false
 
 CATKIN="${HOME}/catkin_ws"
 WCD="${HOME}/WCD"

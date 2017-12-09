@@ -35,6 +35,9 @@ IPS=("192.168.20.22" \
     "192.168.20.34" \
 )
 
+
+#IPS=("192.168.20.123")
+
 # Optionally - tell us the hostnames
 
 declare -A LAPS

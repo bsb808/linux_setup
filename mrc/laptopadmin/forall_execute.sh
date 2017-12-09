@@ -37,6 +37,8 @@ if ! [ REV ]; then
     done
 fi
 	
+GOOD=0
+BAD=0
 for IP in "${IPS[@]}"
 do 
     ip="${IP}"
@@ -47,7 +49,22 @@ do
     do
 	echo "CMD: <${CMD}>"
 	ssh ${USER}@${IP} -t "exec bash -i -c \"${CMD}\""
-
+	RTN=$?
+	RED='\033[0;31m'
+	NC='\033[0m' # No Color
+	GREEN='\033[0;32m'
+	if [ ${RTN}  -eq 0 ]; then
+	    echo -e "${GREEN}Success!${NC}"
+	    GOOD=$(($GOOD + 1))
+	else
+	    # Make it easy to see failures
+	    echo "          ****************************************"
+	    echo -e "${RED}           ************** FAILED **************${NC}"
+	    echo "          ****************************************"
+	    BAD=$(($BAD + 1))
+	fi
+	
     done
 done
+echo -e "${GREEN}Successes: $GOOD ${RED} Failures: $BAD ${NC}"
 

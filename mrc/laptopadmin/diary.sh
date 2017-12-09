@@ -37,6 +37,9 @@
 # Pull all repositories
 ./forall_execute.sh cmds_pullrepos.sh robotx
 
+# kingfisher_gazebo indigo-devel branch
+./forall_execute.sh cmds_kfgzbranch.sh robotx
+
 # Catkin make
 ./forall_execute.sh cmds_catkinmake.sh robotx
 
@@ -48,7 +51,7 @@
 
 
 # Reboot1
-./forall_execute.sh cmds_reboot.sh frl
+./forall_execute.sh cmds_reboot.sh robotx
 
 
 
