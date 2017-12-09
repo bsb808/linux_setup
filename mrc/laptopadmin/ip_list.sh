@@ -35,12 +35,17 @@ IPS=("192.168.20.22" \
     "192.168.20.34" \
 )
 
-
+IPS=("192.168.1.101" \
+    "192.168.1.77")
 #IPS=("192.168.20.123")
 
 # Optionally - tell us the hostnames
 
 declare -A LAPS
+
+
+LAPS["192.168.1.101"]="haupia"
+LAPS["192.168.1.77"]="haupia"
 
 LAPS["192.168.20.22"]="awela"
 LAPS["192.168.20.28"]="kole"

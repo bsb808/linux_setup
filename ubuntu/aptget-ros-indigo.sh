@@ -32,5 +32,9 @@ apt-get -y install -y --force-yes \
     ros-${distro}-teleop-twist-joy \
     ros-${distro}-teleop-twist-keyboard \
     ros-${distro}-joy-teleop \
-    ros-${distro}-multimaster-fkie
+    ros-${distro}-multimaster-fkie \
+    ros-${distro}-geographic-info \
+    ros-${distro}-kingfisher-msgs \
+    ros-${distro}-kingfisher-description
+    
 

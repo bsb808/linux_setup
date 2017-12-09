@@ -40,6 +40,9 @@
 # kingfisher_gazebo indigo-devel branch
 ./forall_execute.sh cmds_kfgzbranch.sh robotx
 
+# Re-run if you make changes
+./forall_execute.sh cmds_rosindigoaptget.sh
+
 # Catkin make
 ./forall_execute.sh cmds_catkinmake.sh robotx
 
