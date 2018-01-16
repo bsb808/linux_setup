@@ -27,12 +27,14 @@ apt-get -y install \
     gimp \
     keepassx \
     pdftk \
+    virtualbox \
+    virtualbox-ext-pack \
+    texlive-full \
     xournal
 
 # Chromium
 apt-get -y install \
 	chromium-browser \
-	chromium-codecs-ffmpeg  \
 	chromium-codecs-ffmpeg-extra \
 	flashplugin-installer 
 # Optional bits

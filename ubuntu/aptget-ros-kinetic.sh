@@ -19,20 +19,27 @@ apt-get update
 # Do this to force no questions
 #export DEBIAN_FRONTEND=noninteractive
 
+FORCEYES="--force-yes"
+FORCEYES=""
 
 distro="kinetic"
-apt-get install -y --force-yes \
+apt-get install -y ${FORCEYES} \
 	ros-${distro}-desktop \
 	ros-${distro}-rosdoc-lite 
 
 # Other NPS specific packages
-apt-get -y install -y --force-yes \
+apt-get -y install -y ${FORCEYES} \
     ros-${distro}-gazebo-ros-control \
     ros-${distro}-gazebo-ros-pkgs \
     ros-${distro}-teleop-twist-joy \
     ros-${distro}-teleop-twist-keyboard \
     ros-${distro}-joy-teleop \
-    ros-${distro}-multimaster-fkie
+    ros-${distro}-multimaster-fkie \
+    ros-${distro}-geographic-info \
+    ros-${distro}-move-base \
+    ros-${distro}-hector-gazebo \
+    ros-${distro}-hector-gazebo-plugins
+    
 
 
 apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
