@@ -1,17 +1,16 @@
 #!/bin/bash
 
 # Installation script for Ubuntu 16.04
-apt-get -y update
-apt-get -y upgrade
-apt-get -y dist-upgrade
+apt -y update
+apt -y upgrade
+apt -y dist-upgrade
 
 #    byacc \
-
-apt-get -y install \
+#     flex \
+#     bison \
+apt -y install \
     aptitude \
     autoconf \
-    flex \
-    bison \
     libtool \
     cifs-utils \
     git \
