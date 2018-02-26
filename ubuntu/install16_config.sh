@@ -10,3 +10,4 @@ cp ../generic/dot_emacs ~/.emacs
 
 # add myself to the dialout group for permissions to serial ports
 sudo adduser bsb dialout
+sudo adduser frl dialout

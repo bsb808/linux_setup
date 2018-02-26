@@ -21,6 +21,7 @@ apt -y install \
     gnome-terminal \
     ntp \
     python-numpy python-scipy python-matplotlib ipython \
+    python-serial \
     ssh \
     subversion \
     openssh-server \
