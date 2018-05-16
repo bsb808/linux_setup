@@ -12,3 +12,5 @@
 #Daily incremental backup with no delete - eve months
 01 01 02-31 2-12/2 * /home/bsb/WorkingCopies/frl/util/backup/backup_npshome_internal.sh -t dailyeven
 
+#Daily backup to NAS
+02 02 * * * bash /home/bsb/WorkingCopies/linux_setup/rsync_archives2nas.sh     

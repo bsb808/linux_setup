@@ -30,7 +30,8 @@ done
 #### DESTINATION
 # make sure to include the trailing slash here.
 
-BACKUP_ROOT=/media/InternalDrive/bsb/Backups/NpsDesktop/$TIMING/;
+#BACKUP_ROOT=/media/InternalDrive/bsb/Backups/NpsDesktop/$TIMING/;
+BACKUP_ROOT=/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/$TIMING/;
 echo "Set backup directory to: $BACKUP_ROOT" |& tee -a ${LOG_FILE}
 #### SOURCE
 # The directory we want to backup
