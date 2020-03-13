@@ -10,9 +10,11 @@ apt -y install \
     autoconf \
     libtool \
     cifs-utils \
+    cmake \
     git \
     gtkterm \
     iputils-ping \
+    mercurial \
     minicom \
     nano \
     net-tools \
@@ -21,6 +23,7 @@ apt -y install \
     ntpdate \
     python-numpy python-scipy python-matplotlib ipython \
     python-serial \
+    ruby \
     ssh \
     openssh-server \
     vim \
