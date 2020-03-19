@@ -19,6 +19,7 @@ apt install \
     keepassx \
     rar \
     p7zip-rar p7zip-full unace unrar sharutils \
+    texlive-full jabref latexmk \
     virtualbox \
     xournal \
     chromium-browser \

@@ -66,6 +66,11 @@
 	       (string-to-number (how-many "\\<")) (- end start)))))
 (define-key esc-map "=" 'sds-word-count)
 
+;; http://pragmaticemacs.com/emacs/count-words-in-region-or-buffer/
+;; use count-words instead of count-words-region as it works on buffer
+;; if no region is selected
+(global-set-key (kbd "M-=") 'count-words)
+
 ;; Get rid of annoying splash screen
 (setq inhibit-splash-screen t)
 
