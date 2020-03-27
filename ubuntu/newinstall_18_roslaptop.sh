@@ -10,7 +10,7 @@
 ./apt_18_ros.sh
 
 # Gazebo
-
+./apt_18_gazebo.sh
 
 # Admin configurations.
 ./config_18_sudo.sh
