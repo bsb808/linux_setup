@@ -18,6 +18,7 @@ apt -y install \
     minicom \
     nano \
     net-tools \
+    ntpdate \
     picocom \
     ntp \
     ntpdate \
