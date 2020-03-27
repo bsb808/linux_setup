@@ -35,4 +35,6 @@ apt install \
 apt upgrade libignition-math2
 
 #     ros-${DIST}-multimaster-fkie \
+
+source /opt/ros/melodic/setup.bash 
 rosdep init || echo Ignore error if rosdep is already initialized

@@ -7,13 +7,13 @@
 ./apt_18_gnome_extra.sh
 
 # Install ROS
-#./apt_18_ros.sh
+./apt_18_ros.sh
 
 # Gazebo
-#./apt_18_gazebo.sh
+./apt_18_gazebo.sh
 
 # Admin configurations.
-#./config_18_sudo.sh
+./config_18_sudo.sh
 
 
 
