@@ -22,6 +22,7 @@ apt -y install \
     picocom \
     ntp \
     ntpdate \
+    openssh-server \
     python-numpy python-scipy python-matplotlib ipython \
     python-serial \
     ruby \
