@@ -30,7 +30,6 @@ apt install \
     ros-${DIST}-xacro \
     ros-${DIST}-rqt \
     ros-${DIST}-rqt-common-plugins \
-    python-rosdep2
 
 apt upgrade libignition-math2
 
