@@ -29,7 +29,8 @@ apt install \
     ros-${DIST}-robot-state-publisher \
     ros-${DIST}-xacro \
     ros-${DIST}-rqt \
-    ros-${DIST}-rqt-common-plugins
+    ros-${DIST}-rqt-common-plugins \
+    python-rosdep2
 
 apt upgrade libignition-math2
 

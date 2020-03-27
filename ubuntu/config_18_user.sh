@@ -21,3 +21,5 @@ else
     echo Warning: Another ROS version is active, ~.bashrc unchanged.
     echo Please set your .bashrc to select your desired ROS version.
 fi
+
+rosdep update
