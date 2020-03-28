@@ -1,119 +1,97 @@
 Set rsync delete options --delete --delete-excluded 
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Tue May  1 01:01:01 PDT 2018
+Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/iwi/daily/
+    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/iwi/daily/> at Fri Mar 27 20:42:23 PDT 2020
 sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Tue May  1 01:01:01 PDT 2018
-============= START new backup script on Wed May  2 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Wed May  2 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Wed May  2 01:01:01 PDT 2018
-============= START new backup script on Thu May  3 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Thu May  3 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Thu May  3 01:01:01 PDT 2018
-============= START new backup script on Fri May  4 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Fri May  4 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Fri May  4 01:01:01 PDT 2018
-============= START new backup script on Sat May  5 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Sat May  5 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Sat May  5 01:01:02 PDT 2018
-============= START new backup script on Sun May  6 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Sun May  6 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Sun May  6 01:01:01 PDT 2018
-============= START new backup script on Mon May  7 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Mon May  7 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Mon May  7 01:01:01 PDT 2018
-============= START new backup script on Tue May  8 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Tue May  8 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Tue May  8 01:01:01 PDT 2018
-============= START new backup script on Wed May  9 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Wed May  9 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Wed May  9 01:01:01 PDT 2018
-============= START new backup script on Thu May 10 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Thu May 10 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Thu May 10 01:01:02 PDT 2018
-============= START new backup script on Fri May 11 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Fri May 11 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Fri May 11 01:01:01 PDT 2018
-============= START new backup script on Sat May 12 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Sat May 12 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Sat May 12 01:01:01 PDT 2018
-============= START new backup script on Sun May 13 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Sun May 13 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Sun May 13 01:01:01 PDT 2018
-============= START new backup script on Mon May 14 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Mon May 14 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Mon May 14 01:01:02 PDT 2018
-============= START new backup script on Tue May 15 01:01:01 PDT 2018============
-Set timing to <dailyodd> - determines backup directory
-Set backup directory to: /media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/
-    *** Starting to backup </home/bsb> to </media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd/> at Tue May 15 01:01:01 PDT 2018
-sending incremental file list
-rsync: mkdir "/media/bsb/InternalDrive/bsb/Backups/NpsDesktop/dailyodd" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.1]
-    *** END: Complted at Tue May 15 01:01:01 PDT 2018
+deleting bsb/tmp/mrc_hw1/README.md
+deleting bsb/tmp/mrc_hw1/
+deleting bsb/tmp/
+deleting bsb/snap/shotcut/common/
+deleting bsb/snap/shotcut/61/
+deleting bsb/snap/shotcut/current
+deleting bsb/snap/shotcut/
+deleting bsb/snap/
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/overshoot_svg_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/overshoot_graphs_svg_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/overshoot_graph2_svg_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/hdg_log46_svg_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/hdg_180_log08_svg_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/conc_svg_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/attempt3_svg_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/attempt2_svg_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/attempt2.svg
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/attempt1_svg_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/attempt1.svg
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/Title_svg_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/FRLTentacles_bounded_uhm_url_black_whitebg_png_1.png
+deleting bsb/Classes/ME2801/VidExamples/UPSV_Hdg_Video/tmp/
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/stepAnnote.html
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/hw4_design_ex_05.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/hw4_design_ex_04.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/hw4_design_ex_03.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/hw4_design_ex_02.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/hw4_design_ex_01.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/hw4_design_ex.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/hw4_design_ex.html
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/fp4_5_03.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/fp4_5_02.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/fp4_5_01.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/fp4_5.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/fp4_5.html
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/html/
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/positioncontrol_pd_filt.slx
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/positioncontrol_pd.slx
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/positioncontrol_dfdbk.slx
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/pid_ex3.slx
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/pid_ex2.slx
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/pid_ex.slx
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/me2801-hw4-f15.pdf
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/me2801-hw4-f15.odt
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/hw4_design
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/fp4_5.pdf
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/fp4_5.m
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/fp4_4_test.m
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/fp4_4.m
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/fp4_4
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/fp4.4_test
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/first-order-ill.png
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/d_filt.svg
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/d_filt.slx
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/d_filt.eps
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/d_fdbk.svg
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/d_fdbk.slx
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/d_fdbk.eps
+deleting bsb/Classes/ME2801/assign/tmp/hw4-feedback/
+deleting bsb/Classes/ME2801/assign/tmp/
+deleting bsb/Classes/ME4823/assign/hw1/tmp/sandbox/dir2/file2.txt
+deleting bsb/Classes/ME4823/assign/hw1/tmp/sandbox/dir2/
+deleting bsb/Classes/ME4823/assign/hw1/tmp/sandbox/dir1/file1.txt
+deleting bsb/Classes/ME4823/assign/hw1/tmp/sandbox/dir1/
+deleting bsb/Classes/ME4823/assign/hw1/tmp/sandbox/commands.txt
+deleting bsb/Classes/ME4823/assign/hw1/tmp/sandbox/
+deleting bsb/Classes/ME4823/assign/hw1/tmp/playpen/folder2/file2.txt
+deleting bsb/Classes/ME4823/assign/hw1/tmp/playpen/folder2/
+deleting bsb/Classes/ME4823/assign/hw1/tmp/playpen/folder1/file1.txt
+deleting bsb/Classes/ME4823/assign/hw1/tmp/playpen/folder1/
+deleting bsb/Classes/ME4823/assign/hw1/tmp/playpen/play.txt
+deleting bsb/Classes/ME4823/assign/hw1/tmp/playpen/
+deleting bsb/Classes/ME4823/assign/hw1/tmp/tree.out
+deleting bsb/Classes/ME4823/assign/hw1/tmp/
+deleting bsb/Classes/ME4823/gitrepos/tmp/mrc_hw1_exercise/bsbingha.txt
+deleting bsb/Classes/ME4823/gitrepos/tmp/mrc_hw1_exercise/README
+deleting bsb/Classes/ME4823/gitrepos/tmp/mrc_hw1_exercise/
+deleting bsb/Classes/ME4823/gitrepos/tmp/
+deleting bsb/Classes/ME4823/grading/tmp/mrc_hw3/launch/turtle.launch
+deleting bsb/Classes/ME4823/grading/tmp/mrc_hw3/launch/
+deleting bsb/Classes/ME4823/grading/tmp/mrc_hw3/tmp.txt
+deleting bsb/Classes/ME4823/grading/tmp/mrc_hw3/package.xml
+deleting bsb/Classes/ME4823/grading/tmp/mrc_hw3/CMakeLists.txt
+deleting bsb/Classes/ME4823/grading/tmp/mrc_hw3/
+deleting bsb/Classes/ME4823/grading/tmp/
+deleting bsb/Classes/ME4823/grading/mrc_grading/tmp/rosgraph_lf_rare.png
+deleting bsb/Classes/ME4823/grading/mrc_grading/tmp/rfid_map_rare.png
+deleting bsb/Classes/ME4823/grading/mrc_grading/tmp/lf_teleop_rare.png
+deleting bsb/Classes/ME4823/grading/mrc_grading/tmp/
+
+sent 415,439 bytes  received 6,584 bytes  281,348.67 bytes/sec
+total size is 11,561,510,658  speedup is 27,395.45
+    *** END: Complted at Fri Mar 27 20:42:24 PDT 2020

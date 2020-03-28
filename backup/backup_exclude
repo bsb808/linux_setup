@@ -3,3 +3,7 @@
 *.vdi
 *.vmdk
 Downloads
+WorkingCopies
+tmp
+snap
+*_ws
