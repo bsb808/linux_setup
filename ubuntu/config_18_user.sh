@@ -22,4 +22,4 @@ else
     echo Please set your .bashrc to select your desired ROS version.
 fi
 
-rosdep update
+#rosdep update
