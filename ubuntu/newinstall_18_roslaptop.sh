@@ -4,7 +4,8 @@
 ./apt_18_base.sh
 
 # Some other nice-to-have packages
-./apt_18_gnome_extra.sh
+./apt_18_extra.sh
+#./apt_18_gnome_extra.sh
 
 # Install ROS
 ./apt_18_ros.sh
@@ -13,7 +14,7 @@
 ./apt_18_gazebo.sh
 
 # Admin configurations.
-./config_18_sudo.sh
+#'./config_18_sudo.sh
 
 
 
