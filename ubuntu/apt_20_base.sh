@@ -5,7 +5,7 @@
 #apt -y upgrade
 #apt -y dist-upgrade
 
-apt -y install \
+apt install \
     aptitude \
     autoconf \
     libtool \
@@ -15,7 +15,6 @@ apt -y install \
     git \
     gtkterm \
     iputils-ping \
-    mercurial \
     minicom \
     nano \
     net-tools \
@@ -24,17 +23,14 @@ apt -y install \
     ntp \
     ntpdate \
     openssh-server \
-    python-numpy \
     ruby \
     ssh \
     openssh-server \
     vim \
     vpnc \
     zip \
-    unzip
-
-# Need to find 20.04 packages
-#python-scipy python-matplotlib ipython     python-serial \
+    unzip \
+    python3-numpy python3-scipy python3-matplotlib ipython3 python3-serial
 
 
 # For mounting FAT drives
