@@ -18,7 +18,7 @@ apt install \
     keepassx \
     rar \
     p7zip-rar p7zip-full unace unrar sharutils \
-    texlive texlive-latex-extra texlive-science texlive-publishers jabref latexmk \
+    texlive texlive-latex-extra texlive-science texlive-publishers jabref latexmk texlive-bibtex-extra \
     xournal 
     
   # Things removed from 18.04
