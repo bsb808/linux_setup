@@ -43,7 +43,7 @@ SOURCES[0]=/home/bsb
 # A file with all our excludes in it
 # Use full path so that it works with cron
 #INCLUDES=./backup_include;
-EXCLUDES=${BROOT}/backup_exclude;
+EXCLUDES=${BROOT}/backup_exclude_iwi.txt;
 
 # ------------- the script itself --------------------------------------
 # rsync from the system into the latest snapshot (notice that

@@ -1,7 +1,8 @@
 #!/bin/bash
 
 BROOT=/home/bsb/WorkingCopies/linux_setup/backup
-LOG_FILE=${BROOT}/backup_portable.log
+LOG_FILE=${BROOT}/backup_iwi_portable.log
+
 echo "============= START new backup script on $(date)============"  |& tee -a ${LOG_FILE}
 
 # Set Defaults
@@ -27,7 +28,7 @@ done
 
 #BACKUP_ROOT=/media/InternalDrive/bsb/Backups/NpsDesktop/$TIMING/;
 #BACKUP_ROOT=/media/bsb/InternalDrive/bsb/Backups/iwi/$TIMING/;
-BACKUP_ROOT=/media/bsb/MOE-Bingham/iwi/;
+BACKUP_ROOT=/media/bsb/MOE-Bingham/Backups/iwi/;
 echo "Set backup directory to: $BACKUP_ROOT" |& tee -a ${LOG_FILE}
 #### SOURCE
 # The directory we want to backup
@@ -38,7 +39,7 @@ SOURCES[0]=/home/bsb
 # A file with all our excludes in it
 # Use full path so that it works with cron
 #INCLUDES=./backup_include;
-EXCLUDES=${BROOT}/backup_exclude;
+EXCLUDES=${BROOT}/backup_exclude_iwi.txt;
 
 # ------------- the script itself --------------------------------------
 # rsync from the system into the latest snapshot (notice that
