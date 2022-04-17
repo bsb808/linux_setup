@@ -1,0 +1,8 @@
+#rsync script exclude file
+.*
+*.vdi
+*.vmdk
+Downloads
+tmp
+snap
+#pCloudDrive
