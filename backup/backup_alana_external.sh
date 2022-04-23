@@ -19,7 +19,7 @@ DELETE_OPTIONS=""
 for SRC in "${SRCS[@]}"
 do    
     #echo "    *** Starting to backup <$SRC> to <$BACKUP_ROOT> at $(date)" |& tee -a ${LOG_FILE}
-    CMD="rsync -ah $DELETE_OPTIONS --exclude-from=${EXCLUDES} $SRC $DEST"
+    CMD="rsync -avh --progress $DELETE_OPTIONS --exclude-from=${EXCLUDES} $SRC $DEST"
     echo "== Running command <${CMD}>." |& tee -a ${LOCAL_LOG}
     eval $CMD |& tee -a ${LOCAL_LOG}
     #|& tee -a ${LOG_FILE};
