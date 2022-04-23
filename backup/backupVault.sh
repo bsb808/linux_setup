@@ -1,16 +1,16 @@
 z#!/bin/bash
 
 # Source array
-SRCS[0]=/data/Vault/Photos
+SRCS[0]=/data/Vault
 
 # Destination
 # Name of the external
 EXTERNAL="FRL-Backup"
 #EXTERNAL="BareExt4Alpha"
-DEST="/media/bsb/${EXTERNAL}/vault/"
+DEST="/media/bsb/${EXTERNAL}/"
 
 HOST=`hostname`
-LOG_FNAME="backup_photos_from_${HOST}_to_external.log"
+LOG_FNAME="backup_vault_from_${HOST}_to_${EXTERNAL}.log"
 LOCAL_LOG="./${LOG_FNAME}"
 
 echo "= Start backup script on $(date) from <$(hostname)>."  |& tee -a ${LOCAL_LOG}

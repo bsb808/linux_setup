@@ -1,22 +1,24 @@
-z#!/bin/bash
+#!/bin/bash
+
+HOST=`hostname`
 
 # Source array
-SRCS[0]=/data/Vault/Photos
+SRCS[0]=/home/bsb
 
 # Destination
 # Name of the external
-EXTERNAL="FRL-Backup"
+EXTERNAL="MOE-Bingham"
 #EXTERNAL="BareExt4Alpha"
-DEST="/media/bsb/${EXTERNAL}/vault/"
+#EXTERNAL="BareExt4Alpha"
+DEST="/media/bsb/${EXTERNAL}/Backups/${HOST}"
 
-HOST=`hostname`
-LOG_FNAME="backup_photos_from_${HOST}_to_external.log"
+LOG_FNAME="backup_${HOST}_to_external.log"
 LOCAL_LOG="./${LOG_FNAME}"
 
 echo "= Start backup script on $(date) from <$(hostname)>."  |& tee -a ${LOCAL_LOG}
 
 DELETE_OPTIONS=""
-EXCLUDES=excludes_photos.txt
+EXCLUDES=excludes_host.txt
 
 # For each of the sources in the array
 for SRC in "${SRCS[@]}"
