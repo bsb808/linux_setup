@@ -7,7 +7,9 @@ SRCS[0]=/home/bsb
 
 # Destination
 # Name of the external
-EXTERNAL="MOE-Bingham"
+#EXTERNAL="MOE-Bingham"
+#EXTERNAL="Passport2TB"
+EXTERNAL="FRL-Backup"
 #EXTERNAL="BareExt4Alpha"
 #EXTERNAL="BareExt4Alpha"
 DEST="/media/bsb/${EXTERNAL}/Backups/${HOST}"
