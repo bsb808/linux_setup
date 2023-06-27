@@ -5,8 +5,6 @@
 # apt-get
 apt install \
     gparted \
-    gnome-shell-extensions \
-    gnome-tweak-tool \
     emacs \
     ffmpeg \
     inkscape \
