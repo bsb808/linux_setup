@@ -5,11 +5,12 @@ SRC_ROOT="/data/Vault"
 #SRC_ROOT="/media/bsb/BareExt4Alpha/Vault"
 #declare -a SRC_DIRS=("Archive" "Photos" "PhotosFromJanet" "Videos")
 #declare -a SRC_DIRS=("Archive" "Photos" "Movies" "Videos")
-declare -a SRC_DIRS=("Photos" "PhotosFromJanet" "Videos")
+#declare -a SRC_DIRS=("Photos" "PhotosFromJanet" "Videos")
+declare -a SRC_DIRS=("Photos" )
 #declare -a SRC_DIRS=("Archive")
 
 # Destination
-DRIVE="BareExt4Alpha"
+#DRIVE="BareExt4Alpha"
 #DRIVE="PassportSilver"
 #DRIVE="FRL-Backup"
 #DRIVE="Passport2TB"
