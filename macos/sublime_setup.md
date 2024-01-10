@@ -18,3 +18,5 @@ Link to binary
 ```
 sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 ```
+
+Do this for emacs style identation of multiline: https://stackoverflow.com/questions/12385561/align-indent-to-parenthesis-after-linebreak-in-sublime-text
