@@ -20,6 +20,7 @@ apt install \
     unace \
     unrar \
     sharutils \
+    terminator \
     texlive \
     texlive-latex-extra \
     texlive-science \
