@@ -19,3 +19,12 @@ echo \
 apt-get update
 
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+# From https://docs.docker.com/engine/install/linux-postinstall/ 
+groupadd docker
+
+usermod -aG docker $USER
+
+systemctl enable docker.service
+systemctl enable containerd.service
