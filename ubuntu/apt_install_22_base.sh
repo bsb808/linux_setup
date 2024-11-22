@@ -7,22 +7,15 @@ apt -y upgrade
 apt -y dist-upgrade
 
 apt install \
-    aptitude \
     autoconf \
     libtool \
     cifs-utils \
     cmake \
     curl \
     git \
-    gtkterm \
     iputils-ping \
-    minicom \
     nano \
     net-tools \
-    ntpdate \
-    picocom \
-    ntp \
-    ntpdate \
     openssh-server \
     ruby \
     ssh \
