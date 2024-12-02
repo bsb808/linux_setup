@@ -1,0 +1,10 @@
+#https://askubuntu.com/questions/1428517/how-do-i-create-a-new-application-launcher-in-ubuntu-22-04
+# Put this in ~/.local/share/application/
+# Then, `update-desktop-database ~/.local/share/applications/`
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Exec=terminator -l ROS
+Name=terminator_ros
+Icon=/usr/share/icons/HighContrast/24x24/apps/terminator.png

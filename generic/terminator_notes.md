@@ -1,0 +1,1 @@
+Config file is from /.config/terminator/config
