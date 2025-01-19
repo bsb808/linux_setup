@@ -60,5 +60,13 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docke
 #sudo /usr/share/doc/libdvdread4/install-css.sh
 #apt-get -y install libxine1-ffmpeg mencoder
 
+# Open Shot
+add-apt-repository ppa:openshot.developers/ppa
+apt update
+apt install openshot-qt python3-openshotsudo add-apt-repository ppa:openshot.developers/ppa
+
+# Codecs
+apt install libavcodec-extra
+apt install gstreamer1.0-libav
 
 #apt-get install --reinstall exfat-fuse exfat-utils
