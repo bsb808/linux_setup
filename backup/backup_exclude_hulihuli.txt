@@ -1,0 +1,9 @@
+#rsync script exclude file
+.*
+*.vdi
+*.vmdk
+Downloads
+tmp
+snap
+#pCloudDrive
+matlab2022a
