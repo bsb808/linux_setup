@@ -21,7 +21,16 @@ sync_directories() {
     do
         local src="${src_root}/${src_dir}"
         echo "rsync:  ${src}-->  ${dest}"
+        if [ ! -d "${dest}" ]; then
+            echo "Creating directory: ${dest}"
+            mkdir -p "${dest}"
+        fi
         rsync -azv ${delete_flag} ${src} ${dest}
+        if [ $? -ne 0 ]; then
+            echo "###############################################"
+            echo "WARNING: rsync command failed for ${src} to ${dest}"
+            echo "###############################################"
+        fi
     done
 }
 
@@ -48,29 +57,32 @@ sync_directories() {
 # From internal drive (master) to external
 SRC_ROOT="/data/Vault"
 declare -a SRC_DIRS=("Archive" "Photos" "PhotosFromJanet" "Videos")
-DRIVE="BareExt4Alpha"
+#DRIVE="BareExt4Alpha"
+DRIVE="Seagate2TB"
 DEST="/media/bsb/${DRIVE}/Vault/"
-#sync_directories "${SRC_ROOT}" SRC_DIRS[@] "${DEST}"
+sync_directories "${SRC_ROOT}" SRC_DIRS[@] "${DEST}"
 
-# From internal drive (master) to another external
-# use same source
-DRIVE="PassportSilver"
-DEST="/media/bsb/${DRIVE}/Vault/"
-#sync_directories "${SRC_ROOT}" SRC_DIRS[@] "${DEST}"
+# # From internal drive (master) to another external
+# # use same source
+# DRIVE="PassportSilver"
+# DEST="/media/bsb/${DRIVE}/Vault/"
+# #sync_directories "${SRC_ROOT}" SRC_DIRS[@] "${DEST}"
 
-# Local home to internal
-EXCLUDES=./backup_exclude_hulihuli.txt;
-#rsync -azv --exclude-from="$EXCLUDES" /home/bsb /data/Backups/hulihuli2025/
+# # Local home to internal
+# EXCLUDES=./backup_exclude_hulihuli.txt;
+# #rsync -azv --exclude-from="$EXCLUDES" /home/bsb /data/Backups/hulihuli2025/
 
-# Local home to external
-EXCLUDES=./backup_exclude_hulihuli.txt;
-DRIVE="BareExt4Alpha"
-#rsync -azv --exclude-from="$EXCLUDES" /home/bsb "/media/bsb/${DRIVE}/Backups/hulihuli2025/"
+# # Local home to external
+# EXCLUDES=./backup_exclude_hulihuli.txt;
+# DRIVE="BareExt4Alpha"
+# #rsync -azv --exclude-from="$EXCLUDES" /home/bsb "/media/bsb/${DRIVE}/Backups/hulihuli2025/"
 
 # # Local home another external
 EXCLUDES=./backup_exclude_hulihuli.txt;
-DRIVE="PassportSilver"
-#rsync -azv --exclude-from="$EXCLUDES" /home/bsb "/media/bsb/${DRIVE}/Backups/hulihuli2025/"0
+#DRIVE="PassportSilver"
+DRIVE="Seagate2TB"
+mkdir -p "/media/bsb/${DRIVE}/Backups/hulihuli2025/"
+rsync -azv --exclude-from="$EXCLUDES" /home/bsb "/media/bsb/${DRIVE}/Backups/hulihuli2025/"
 
 # Movies from one external to another.
-rsync -azv /media/bsb/FRL-Backup/Vault/Movies/ /media/bsb/PassportSilver/Vault/Movies/
+#rsync -azv /media/bsb/FRL-Backup/Vault/Movies/ /media/bsb/PassportSilver/Vault/Movies/
