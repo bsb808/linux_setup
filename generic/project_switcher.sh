@@ -29,6 +29,10 @@ case "$PROJECT" in
 	source ${HOME}/serve_ws/install/setup.bash
 	export ISAAC_ROS_WS=${HOME}/ros2_ws
         ;;
+    "VRX")
+	source /opt/ros/humble/setup.bash
+	source ${HOME}/vrx_ws/install/setup.bash
+	;;
     *)
         echo "ERROR: Invalid PROJECT value: $PROJECT"
         echo "Valid values are: development, staging, production"
