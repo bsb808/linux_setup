@@ -35,8 +35,8 @@ case "$PROJECT" in
 	;;
     *)
         echo "ERROR: Invalid PROJECT value: $PROJECT"
-        echo "Valid values are: development, staging, production"
-        exit 1
+        echo "See linux_setup/generic/project_switcher.sh"
+        #exit 1
         ;;
 esac
 
