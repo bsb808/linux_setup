@@ -33,6 +33,10 @@ case "$PROJECT" in
 	source /opt/ros/humble/setup.bash
 	source ${HOME}/vrx_ws/install/setup.bash
 	;;
+    "ORPHEUS")
+	source /opt/ros/jazzy/setup.bash
+	source ${HOME}/orpheus_simulation_ws/install/setup.bash
+	;;
     *)
         echo "ERROR: Invalid PROJECT value: $PROJECT"
         echo "See linux_setup/generic/project_switcher.sh"
