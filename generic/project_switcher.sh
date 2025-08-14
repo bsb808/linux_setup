@@ -37,6 +37,14 @@ case "$PROJECT" in
 	source /opt/ros/jazzy/setup.bash
 	source ${HOME}/orpheus_simulation_ws/install/setup.bash
 	;;
+    "CLUTTERBOT")
+	source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+	source /opt/ros/humble/setup.bash
+	source /usr/share/colcon_cd/function/colcon_cd.sh
+	source /etc/profile.d/bash_completion.sh
+	source /root//gz_ros2_control_ws/install/setup.bash
+	source ~/cb_ws/install/setup.bash
+	;;
     *)
         echo "ERROR: Invalid PROJECT value: $PROJECT"
         echo "See linux_setup/generic/project_switcher.sh"
