@@ -42,7 +42,7 @@ case "$PROJECT" in
 	source /opt/ros/humble/setup.bash
 	source /usr/share/colcon_cd/function/colcon_cd.sh
 	source /etc/profile.d/bash_completion.sh
-	source /root//gz_ros2_control_ws/install/setup.bash
+	source /root/gz_ros2_control_ws/install/setup.bash
 	source ~/cb_ws/install/setup.bash
 	;;
     *)
