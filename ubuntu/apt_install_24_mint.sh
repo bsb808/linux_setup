@@ -21,7 +21,6 @@ sudo apt-get install -y \
     printer-driver-all \
     shotwell \
     simple-scan \
-    thunderbird \
     unrar \
     unzip \
     vim \
