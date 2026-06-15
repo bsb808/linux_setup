@@ -6,16 +6,24 @@ SRC_ROOT="/data/Vault"
 #declare -a SRC_DIRS=("Archive" "Photos" "PhotosFromJanet" "Videos")
 #declare -a SRC_DIRS=("Archive" "Photos" "Movies" "Videos")
 #declare -a SRC_DIRS=("Photos" "PhotosFromJanet" "Videos")
-declare -a SRC_DIRS=("Photos" )
-#declare -a SRC_DIRS=("Archive")
+
+# PassportSilver
+DRIVE="PassportSilver"
+declare -a SRC_DIRS=("Photos" "Videos" "Archive")
+DEST="/media/bsb/${DRIVE}/Vault/"
+
+# Portable SSD
+DRIVE="PortableSSD"
+declare -a SRC_DIRS=("Photos" "Videos" "Archive")
+DEST="/media/bsb/${DRIVE}/Vault/"
+
 
 # Destination
 #DRIVE="BareExt4Alpha"
-#DRIVE="PassportSilver"
 #DRIVE="FRL-Backup"
 #DRIVE="Passport2TB"
-DRIVE="Seagate2TBexFAT"
-DEST="/media/bsb/${DRIVE}/Vault/"
+#DRIVE="Seagate2TBexFAT"
+
 #DEST="/data/Vault/"
 
 
