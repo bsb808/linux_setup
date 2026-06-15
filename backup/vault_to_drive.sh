@@ -6,11 +6,16 @@
 # script.
 #
 # Usage:
-#   ./vault_to_drive.sh <DriveName>
+#   ./vault_to_drive.sh <DriveName> [--mirror] [--dry-run]
+#
+#   --mirror   delete files on the drive that no longer exist in the source,
+#              so the backup reflects moves/renames/deletions (a true mirror).
+#   --dry-run  show what would be added/deleted without changing anything.
 #
 # Examples:
-#   ./vault_to_drive.sh PortableSSD
-#   ./vault_to_drive.sh Seagate2TBexFAT
+#   ./vault_to_drive.sh PassportSilver                     # additive backup
+#   ./vault_to_drive.sh PassportSilver --mirror --dry-run  # preview a mirror
+#   ./vault_to_drive.sh PassportSilver --mirror            # apply the mirror
 #
 set -euo pipefail
 
@@ -21,7 +26,7 @@ SRC_ROOT="/data/Vault"
 configure_drive() {
     case "$1" in
         BingSSD2TB)
-            SRC_DIRS=("Photos" "Videos" "Archive")
+            SRC_DIRS=("Photos")
             ;;
         PassportSilver)
             SRC_DIRS=("Photos" "Videos" "Archive")
@@ -43,9 +48,9 @@ configure_drive() {
 }
 # ----------------------------------------------------------------------
 
-# Set to "--delete" to mirror (removes files on the drive that are no longer
-# in the source). Leave empty for additive-only backups.
-DELETE=""
+# Backup options — defaults here, overridden by CLI flags (parsed below).
+DELETE=""      # --mirror sets this to --delete
+DRYRUN=""      # --dry-run / -n sets this to --dry-run
 
 # exFAT can't represent everything in the source. -L copies each symlink's
 # target as a real file (so no symlink data is lost), and these excludes skip
@@ -56,7 +61,25 @@ declare -a EXCLUDES=(
     --exclude='Icon?'                  # macOS custom-folder-icon file (Icon\r)
 )
 
-DRIVE="${1:?Usage: $0 <DriveName>}"
+# --- Parse arguments: <DriveName> [--mirror] [--dry-run] ------------------
+DRIVE=""
+for arg in "$@"; do
+    case "$arg" in
+        --mirror|--delete) DELETE="--delete" ;;
+        --dry-run|-n)      DRYRUN="--dry-run" ;;
+        -h|--help)
+            echo "Usage: $0 <DriveName> [--mirror] [--dry-run]"
+            echo "  --mirror   delete files on the drive that no longer exist in the"
+            echo "             source — use to reflect moves/renames/deletions."
+            echo "  --dry-run  show what would be added/deleted without changing anything."
+            exit 0 ;;
+        -*) echo "Unknown option: $arg" >&2; exit 1 ;;
+        *)  if [ -n "$DRIVE" ]; then echo "Unexpected extra argument: $arg" >&2; exit 1; fi
+            DRIVE="$arg" ;;
+    esac
+done
+[ -n "$DRIVE" ] || { echo "Usage: $0 <DriveName> [--mirror] [--dry-run]" >&2; exit 1; }
+
 configure_drive "$DRIVE"
 DEST="/media/bsb/${DRIVE}/Vault/"
 
@@ -77,6 +100,24 @@ if ! timeout 10 ls "/media/bsb/${DRIVE}/" >/dev/null 2>&1; then
     exit 1
 fi
 
+# Pick rsync options based on the destination filesystem. Case-insensitive,
+# no-symlink, restricted-charset filesystems (exFAT, NTFS, FAT) need symlinks
+# dereferenced (-L) and exFAT-illegal names excluded. A faithful filesystem
+# (ext4, etc.) preserves symlinks, case-variant names, and every filename as-is,
+# so we use neither — exFAT's -L/excludes would silently drop data there.
+DEST_FS=$(findmnt -no FSTYPE --target "/media/bsb/${DRIVE}" 2>/dev/null || true)
+declare -a FS_OPTS=()
+case "$DEST_FS" in
+    exfat|ntfs|ntfs3|vfat|msdos)
+        FS_OPTS=(-L)
+        echo "Destination is ${DEST_FS}: dereferencing symlinks, excluding exFAT-illegal names."
+        ;;
+    *)
+        EXCLUDES=()   # faithful filesystem — copy everything verbatim
+        echo "Destination is ${DEST_FS:-unknown}: faithful copy (symlinks, case, all names kept)."
+        ;;
+esac
+
 # Create the destination subtree if missing (e.g. first backup to a fresh drive).
 mkdir -p "${DEST}"
 
@@ -90,7 +131,13 @@ for SRC_DIR in "${SRC_DIRS[@]}"; do
     # Don't let one directory's error abort the rest of the backup: capture the
     # exit code (disable -e for this call) and keep going.
     set +e
-    rsync -aL --partial --info=progress2 ${DELETE} "${EXCLUDES[@]}" "${SRC}" "${DEST}"
+    if [ -n "$DRYRUN" ]; then
+        # Preview: itemize what would change (incl. '*deleting' lines under
+        # --mirror). No data is written.
+        rsync -ai "${FS_OPTS[@]}" --dry-run ${DELETE} "${EXCLUDES[@]}" "${SRC}" "${DEST}"
+    else
+        rsync -a "${FS_OPTS[@]}" --partial --info=progress2 ${DELETE} "${EXCLUDES[@]}" "${SRC}" "${DEST}"
+    fi
     rc=$?
     set -e
     if [ "$rc" -ne 0 ]; then
@@ -98,6 +145,13 @@ for SRC_DIR in "${SRC_DIRS[@]}"; do
         FAILED+=("${SRC_DIR} (rc=${rc})")
     fi
 done
+
+if [ -n "$DRYRUN" ]; then
+    echo ""
+    echo "Dry run only — nothing was changed. Re-run without --dry-run to apply."
+    echo "(Lines above starting '>f' = would copy, '*deleting' = would remove.)"
+    exit 0
+fi
 
 # --- Go/No-Go verification -------------------------------------------------
 # Confirm every source file is present on the drive at the right size, rather
@@ -117,7 +171,7 @@ for SRC_DIR in "${SRC_DIRS[@]}"; do
     set +e
     # Count itemized lines for files/dirs still to send/create/delete; ignore
     # attribute-only lines (those start with '.').
-    pending=$(rsync -aniL --size-only ${DELETE} "${EXCLUDES[@]}" "${SRC}" "${DEST}" 2>/dev/null \
+    pending=$(rsync -ani "${FS_OPTS[@]}" --size-only ${DELETE} "${EXCLUDES[@]}" "${SRC}" "${DEST}" 2>/dev/null \
               | grep -cE '^(>|<|c|\*)')
     set -e
     if [ "${pending:-0}" -ne 0 ]; then
