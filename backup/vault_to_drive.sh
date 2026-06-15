@@ -47,6 +47,15 @@ configure_drive() {
 # in the source). Leave empty for additive-only backups.
 DELETE=""
 
+# exFAT can't represent everything in the source. -L copies each symlink's
+# target as a real file (so no symlink data is lost), and these excludes skip
+# the handful of files whose names use characters exFAT forbids (colons,
+# control chars) — they'd error on every run and falsely trip the verify.
+declare -a EXCLUDES=(
+    --exclude='cm-chat-media-video*'   # iMessage clips with ':' in the name
+    --exclude='Icon?'                  # macOS custom-folder-icon file (Icon\r)
+)
+
 DRIVE="${1:?Usage: $0 <DriveName>}"
 configure_drive "$DRIVE"
 DEST="/media/bsb/${DRIVE}/Vault/"
@@ -76,10 +85,12 @@ for SRC_DIR in "${SRC_DIRS[@]}"; do
     SRC="${SRC_ROOT}/${SRC_DIR}"
     echo "rsync:  ${SRC}  -->  ${DEST}"
     # --partial keeps interrupted files so they resume instead of restarting.
+    # -a (no -v): one overall progress line via --info=progress2, not a line
+    # per file. Add ,name0 to silence even the current-file name if desired.
     # Don't let one directory's error abort the rest of the backup: capture the
     # exit code (disable -e for this call) and keep going.
     set +e
-    rsync -av --partial --info=progress2 ${DELETE} "${SRC}" "${DEST}"
+    rsync -aL --partial --info=progress2 ${DELETE} "${EXCLUDES[@]}" "${SRC}" "${DEST}"
     rc=$?
     set -e
     if [ "$rc" -ne 0 ]; then
@@ -88,11 +99,44 @@ for SRC_DIR in "${SRC_DIRS[@]}"; do
     fi
 done
 
-if [ "${#FAILED[@]}" -gt 0 ]; then
+# --- Go/No-Go verification -------------------------------------------------
+# Confirm every source file is present on the drive at the right size, rather
+# than trusting rsync's exit code alone. A dry-run (-n) reports what WOULD still
+# be transferred; if that's empty, the backup is complete.
+#
+# --size-only is deliberate: exFAT can't store Unix perms/owner/mtime, so a
+# plain -a compare would flag attribute "differences" on every file and never
+# pass. Size presence is the meaningful completeness check here. (For a deeper
+# content check you could swap in --checksum, but that re-reads all data on
+# both sides and is slow over hundreds of GB.)
+echo ""
+echo "Verifying (go/no-go)..."
+declare -a MISMATCH=()
+for SRC_DIR in "${SRC_DIRS[@]}"; do
+    SRC="${SRC_ROOT}/${SRC_DIR}"
+    set +e
+    # Count itemized lines for files/dirs still to send/create/delete; ignore
+    # attribute-only lines (those start with '.').
+    pending=$(rsync -aniL --size-only ${DELETE} "${EXCLUDES[@]}" "${SRC}" "${DEST}" 2>/dev/null \
+              | grep -cE '^(>|<|c|\*)')
+    set -e
+    if [ "${pending:-0}" -ne 0 ]; then
+        echo "  NO-GO: ${SRC_DIR} — ${pending} item(s) missing or wrong size" >&2
+        MISMATCH+=("${SRC_DIR} (${pending})")
+    else
+        echo "  GO:    ${SRC_DIR} — verified in sync"
+    fi
+done
+
+# --- Final verdict ---------------------------------------------------------
+if [ "${#FAILED[@]}" -gt 0 ] || [ "${#MISMATCH[@]}" -gt 0 ]; then
     echo "" >&2
-    echo "Backup completed with errors in: ${FAILED[*]}" >&2
-    echo "Re-run to retry — rsync skips already-copied files. If errors persist," >&2
+    [ "${#FAILED[@]}"   -gt 0 ] && echo "  transfer errors:  ${FAILED[*]}"   >&2
+    [ "${#MISMATCH[@]}" -gt 0 ] && echo "  failed verify:    ${MISMATCH[*]}" >&2
+    echo "RESULT: NO-GO — backup is NOT complete." >&2
+    echo "Re-run to retry (rsync skips already-copied files). If it persists," >&2
     echo "check 'sudo dmesg | tail' for device-offline/reset (cable/power/drive)." >&2
     exit 1
 fi
-echo "All directories backed up successfully."
+echo ""
+echo "RESULT: GO — all directories backed up and verified in sync."
