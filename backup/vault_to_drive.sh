@@ -71,8 +71,28 @@ fi
 # Create the destination subtree if missing (e.g. first backup to a fresh drive).
 mkdir -p "${DEST}"
 
+declare -a FAILED=()
 for SRC_DIR in "${SRC_DIRS[@]}"; do
     SRC="${SRC_ROOT}/${SRC_DIR}"
     echo "rsync:  ${SRC}  -->  ${DEST}"
-    rsync -av --info=progress2 ${DELETE} "${SRC}" "${DEST}"
+    # --partial keeps interrupted files so they resume instead of restarting.
+    # Don't let one directory's error abort the rest of the backup: capture the
+    # exit code (disable -e for this call) and keep going.
+    set +e
+    rsync -av --partial --info=progress2 ${DELETE} "${SRC}" "${DEST}"
+    rc=$?
+    set -e
+    if [ "$rc" -ne 0 ]; then
+        echo "WARNING: rsync of ${SRC_DIR} exited ${rc} (some files may not have transferred)." >&2
+        FAILED+=("${SRC_DIR} (rc=${rc})")
+    fi
 done
+
+if [ "${#FAILED[@]}" -gt 0 ]; then
+    echo "" >&2
+    echo "Backup completed with errors in: ${FAILED[*]}" >&2
+    echo "Re-run to retry — rsync skips already-copied files. If errors persist," >&2
+    echo "check 'sudo dmesg | tail' for device-offline/reset (cable/power/drive)." >&2
+    exit 1
+fi
+echo "All directories backed up successfully."
