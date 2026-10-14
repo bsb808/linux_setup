@@ -8,6 +8,7 @@ Setup scripts and notes for Linux installs, ROS and LCM.
 |---|---|
 | `ubuntu/` | Ubuntu install scripts, newest release first; `ubuntu/older/` holds 14.04 through 20.04 |
 | `generic/` | bash additions, emacs, terminator configs, project switcher |
+| `dotfiles/` | stow packages symlinked into `$HOME`: Ghostty, tmux |
 | `backup/` | rsync backup scripts for the workstation, NAS and external drives |
 | `macos/` | bash and python setup notes for macOS |
 | `mrc/`, `robotx_setup/`, `ros/` | project-specific fleet and ROS scripts |
@@ -30,3 +31,18 @@ git clone git@github.com:bsb808/linux_setup.git ~/WorkingCopies/linux_setup
 cd ~/WorkingCopies/linux_setup/ubuntu
 ./setup_26_x1.sh
 ```
+
+## Terminal and dotfiles
+
+Ghostty, tmux and their config, kept in step across machines with GNU stow.
+
+```bash
+sudo ubuntu/apt_install_terminal.sh   # tmux, xclip, fzf, stow, Ghostty snap
+dotfiles/stow.sh                      # symlink dotfiles/* into $HOME
+```
+
+Each directory under `dotfiles/` is a stow package that mirrors `$HOME`, so
+`dotfiles/tmux/.tmux.conf` becomes `~/.tmux.conf`. The live files are symlinks
+into this repo: edit them in place and commit. `stow.sh` moves any real file it
+would replace to `~/.dotfiles-backup/<time>/`. To add a file, move it into a
+package at the same relative path and re-run `dotfiles/stow.sh <package>`.

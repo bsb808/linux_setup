@@ -1,0 +1,24 @@
+# Ghostty config. Reload: Ctrl+Shift+,   Validate: ghostty +validate-config
+# All options with docs: ghostty +show-config --default --docs
+
+# --- Font ---
+# Unset = built-in JetBrains Mono. Names must match `ghostty +list-fonts`.
+# Installed monospace: Ubuntu Mono, DejaVu Sans Mono, Noto Sans Mono,
+#   Liberation Mono, Go Mono. More: sudo apt install fonts-firacode, etc.
+# font-family = Ubuntu Mono
+# Points, decimals OK (default 12). Ctrl+= / Ctrl+- / Ctrl+0 adjust per window.
+font-size = 12
+# Extra line spacing: percent (10%) or pixels (2). Default 0.
+# adjust-cell-height = 10%
+
+# --- Theme ---
+# Follows the GNOME light/dark setting. Browse: `ghostty +list-themes`.
+# Others: Gruvbox Dark, Dracula, Catppuccin Frappe/Macchiato, Rose Pine.
+theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+
+# --- Keys ---
+# Split navigation on Alt+arrows: GNOME owns Ctrl+Alt+arrows for workspaces.
+keybind = alt+arrow_left=goto_split:left
+keybind = alt+arrow_right=goto_split:right
+keybind = alt+arrow_up=goto_split:up
+keybind = alt+arrow_down=goto_split:down
