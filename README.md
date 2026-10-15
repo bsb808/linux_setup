@@ -8,7 +8,7 @@ Setup scripts and notes for Linux installs, ROS and LCM.
 |---|---|
 | `ubuntu/` | Ubuntu install scripts, newest release first; `ubuntu/older/` holds 14.04 through 20.04 |
 | `generic/` | bash additions, emacs, terminator configs, project switcher |
-| `dotfiles/` | stow packages symlinked into `$HOME`: Ghostty, tmux |
+| `dotfiles/` | stow packages symlinked into `$HOME`: Ghostty, tmux, bash snippets |
 | `backup/` | rsync backup scripts for the workstation, NAS and external drives |
 | `macos/` | bash and python setup notes for macOS |
 | `mrc/`, `robotx_setup/`, `ros/` | project-specific fleet and ROS scripts |
@@ -46,3 +46,9 @@ Each directory under `dotfiles/` is a stow package that mirrors `$HOME`, so
 into this repo: edit them in place and commit. `stow.sh` moves any real file it
 would replace to `~/.dotfiles-backup/<time>/`. To add a file, move it into a
 package at the same relative path and re-run `dotfiles/stow.sh <package>`.
+
+`~/.bashrc` itself stays machine-local. The `bash` package links `~/.bashrc.d/`,
+and `stow.sh` adds one marked block to `~/.bashrc` that sources
+`~/.bashrc.d/*.sh`, once. `editor.sh` there sets `VISUAL`/`EDITOR` to
+`code --wait` (`nano` without a display), so Claude Code's external editor
+doesn't garble its screen.
