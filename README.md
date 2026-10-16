@@ -52,3 +52,7 @@ and `stow.sh` adds one marked block to `~/.bashrc` that sources
 `~/.bashrc.d/*.sh`, once. `editor.sh` there sets `VISUAL`/`EDITOR` to
 `code --wait` (`nano` without a display), so Claude Code's external editor
 doesn't garble its screen.
+
+To leave a laptop running with the lid closed while plugged in (on battery it
+still suspends), run `ubuntu/lid_awake_on_ac.sh` as your user; it uses sudo
+for the logind drop-in.
