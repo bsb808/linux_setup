@@ -36,6 +36,8 @@ case "$PROJECT" in
     "ORPHEUS")
 	source /opt/ros/jazzy/setup.bash
 	source ${HOME}/orpheus_simulation_ws/install/setup.bash
+	alias drun="~/WorkingCopies/dockwater/run.bash dockwater:jazzy"
+	alias djoin="~/WorkingCopies/dockwater/join.bash dockwater_jazzy_runtime"
 	;;
     "CLUTTERBOT")
 	source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
