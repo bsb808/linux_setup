@@ -7,7 +7,7 @@ Setup scripts and notes for Linux installs, ROS and LCM.
 | Directory | Contents |
 |---|---|
 | `ubuntu/` | Ubuntu install scripts, newest release first; `ubuntu/older/` holds 14.04 through 20.04 |
-| `generic/` | bash additions, emacs, terminator configs, project switcher |
+| `generic/` | bash additions, emacs, terminator configs, project switcher (deprecated) |
 | `dotfiles/` | stow packages symlinked into `$HOME`: Ghostty, tmux, bash snippets |
 | `backup/` | rsync backup scripts for the workstation, NAS and external drives |
 | `macos/` | bash and python setup notes for macOS |

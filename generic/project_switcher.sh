@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# DEPRECATED: no longer maintained. Kept only so existing .bashrc files that
+# source it keep working. Set up each project's environment directly instead
+# (e.g. source the ROS distro and workspace in .bashrc or a container).
+# Remove the source line from .bashrc when you next touch it.
+
 # Script to switch between different projects.
 # set the project variable in .bashrc, e.g., `export PROJECT=ISAAC`
 # Include this in .bashrc by adding the line "source $HOME/WorkingCopies/linux_setup/generic/project_switcher.sh
