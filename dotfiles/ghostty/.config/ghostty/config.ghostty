@@ -5,16 +5,16 @@
 # Unset = built-in JetBrains Mono. Names must match `ghostty +list-fonts`.
 # Installed monospace: Ubuntu Mono, DejaVu Sans Mono, Noto Sans Mono,
 #   Liberation Mono, Go Mono. More: sudo apt install fonts-firacode, etc.
-# font-family = Ubuntu Mono
+font-family = Noto Sans Mono
 # Points, decimals OK (default 12). Ctrl+= / Ctrl+- / Ctrl+0 adjust per window.
-font-size = 12
+font-size = 11
 # Extra line spacing: percent (10%) or pixels (2). Default 0.
 # adjust-cell-height = 10%
 
 # --- Theme ---
 # Follows the GNOME light/dark setting. Browse: `ghostty +list-themes`.
 # Others: Gruvbox Dark, Dracula, Catppuccin Frappe/Macchiato, Rose Pine.
-theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+#theme = light:Catppuccin Latte,dark:Catppuccin Mocha
 
 # --- Keys ---
 # Split navigation on Alt+arrows: GNOME owns Ctrl+Alt+arrows for workspaces.
