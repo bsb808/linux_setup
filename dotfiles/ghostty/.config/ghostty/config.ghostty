@@ -22,3 +22,7 @@ keybind = alt+arrow_left=goto_split:left
 keybind = alt+arrow_right=goto_split:right
 keybind = alt+arrow_up=goto_split:up
 keybind = alt+arrow_down=goto_split:down
+# Ctrl+Shift+W closes the focused split (default is close_tab, which kills every split in the tab).
+# Closing the last split still closes the tab. Whole tab: Ctrl+Alt+Shift+W.
+keybind = ctrl+shift+w=close_surface
+keybind = ctrl+alt+shift+w=close_tab:this

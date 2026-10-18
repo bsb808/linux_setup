@@ -1,8 +1,8 @@
 # Ghostty tour
 
 A hands-on walk through Ghostty 1.3 on this machine. Keys are the defaults
-from `ghostty +list-keybinds --default`, plus the Alt+arrow split bindings in
-our config.
+from `ghostty +list-keybinds --default`, plus the Alt+arrow split bindings and
+the Ctrl+Shift+W close-split rebind in our config.
 
 ## Setup
 
@@ -23,7 +23,8 @@ our config.
 | Move between splits | `Alt+←→↑↓` |
 | Zoom a split to full window and back | `Ctrl+Shift+Enter` |
 | Resize a split | `Super+Ctrl+Shift+arrows` |
-| Close split or tab | `Ctrl+Shift+W` (or `exit`) |
+| Close the focused split | `Ctrl+Shift+W` (or `exit`) |
+| Close the whole tab | `Ctrl+Alt+Shift+W` |
 | Fullscreen | `Ctrl+Enter` |
 | Command palette (every action, searchable) | `Ctrl+Shift+P` |
 
